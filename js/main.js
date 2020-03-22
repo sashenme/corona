@@ -6,46 +6,76 @@ var questions = [
     { title: "Do you have any of the following symptoms?", notsure: false, items: ["Tiredness", "Aches and Pains", "Nasal Congestion", "Runny Nose", "Sore Throat", "Diarrhoea"] },
     { title: "Travel & Social History", subtile: "Have you returned to Sri Lanka from any country within the last 14 days?  Or Have you been in contact with a confirmed or suspected COVID19 patient during the last 14 days?", notsure: true, }
 ];
-var gender = 1;
+var gender = 0;
 var answers = [];
 
 $(document).ready(function () {
 
+    //Starting Screen
     $("#btn-notsure").hide();
     $("#q-list").hide()
     $("#q-subtitle").hide()
     $(".recommendation").hide();
-    // $(".questions").hide();
+    $(".questions").hide(); //
+    $(".buttons").hide(); //
     $("#return").hide();
 
 
-    var q = 0;
-    showQuestion(q);
 
-    $("#btn-yes").click(function () {
-        saveAnswers(true);
-        q++;
-        showQuestion(q);
+    $("#btn-male").click(function () {
+        startQuestionare(1);
     });
-    $("#btn-notsure").click(function () {
-        saveAnswers(true);
-        q++;
-        showQuestion(q);
-    });
-    $("#btn-no").click(function () {
-        saveAnswers(false);
-        q++;
-        showQuestion(q);
-
+    $("#btn-female").click(function () {
+        startQuestionare(0);
     });
 
-    $("#return").click(function () {
-        q--;
-        showQuestion(q);
-        answers.pop();
-        $("#btn-notsure").hide();
-    });
+    function startQuestionare(getGender) {
 
+      
+        gender = getGender;
+        $(".gender").hide();
+        $(".questions").show(); //
+        $(".buttons").show(); //
+        var q = 0;
+        showQuestion(q);
+
+
+        $(".icon-info").attr("src", "img/icon-" + gender + "-info.png");
+        $(".icon-warning").attr("src", "img/icon-" + gender + "-warning.png");
+        $(".icon-danger").attr("src", "img/icon-" + gender + "-danger.png");
+
+
+        $("#btn-yes").click(function () {
+            saveAnswers(true);
+            q++;
+            showQuestion(q);
+        });
+        $("#btn-notsure").click(function () {
+            saveAnswers(true);
+            q++;
+            showQuestion(q);
+        });
+        $("#btn-no").click(function () {
+            saveAnswers(false);
+            q++;
+            showQuestion(q);
+    
+        });
+    
+        $("#return").click(function () {
+            q--;
+            showQuestion(q);
+            answers.pop();
+            $("#btn-notsure").hide();
+        });
+    
+    }
+
+
+
+
+
+    
 });
 
 
@@ -56,7 +86,7 @@ function showQuestion(q) {
         $("#return").hide();
     }
     if (q < questions.length) {
-        
+        console.log(gender);
         $("#q-icon").attr("src", "img/icon-" + gender + q + ".png");
 
 

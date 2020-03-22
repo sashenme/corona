@@ -112,6 +112,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.gender .icon {
+  display: block;
+}
+
 .text-danger {
   color: #c50102 !important;
 }
@@ -189,6 +193,10 @@ body {
   .icon {
     height: 180px;
     width: 180px;
+  }
+  .gender .icon {
+    width: 150px;
+    height: 150px;
   }
 }
 /*# sourceMappingURL=main.css.map */
