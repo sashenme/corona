@@ -4,7 +4,7 @@ body {
   font-family: "Poppins";
   background: #eef0f6;
 }
-.navbar{
+.navbar {
   z-index: 2;
 }
 .bg-wrap {
@@ -55,14 +55,13 @@ body {
     font-weight: 600;
     // font-size: 1.3rem;
     color: #21242e;
-   
   }
 }
 .card {
   border-radius: 8px;
   padding: 40px;
   border: none;
-  margin-top: 15vh;
+  margin-top: 5vh;
   margin-bottom: 3rem;
 
   p {
@@ -71,13 +70,13 @@ body {
     line-height: 2;
     font-size: 1.3rem;
   }
-  ul{
+  ul {
     margin-top: 2rem;
   }
-  ul>li{
-      color:$secondary-color;
-      line-height: 2;
-      font-size: 1.3rem;
+  ul > li {
+    color: $secondary-color;
+    line-height: 2;
+    font-size: 1.3rem;
   }
 }
 .buttons {
@@ -96,6 +95,13 @@ body {
     border-color: $secondary-color;
   }
 }
+
+.icon {
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
 @media (max-width: 768px) {
   #language {
     flex-direction: row;
@@ -106,5 +112,9 @@ body {
   }
   .card {
     margin-top: 5vh;
+  }
+  .icon {
+    height: 180px;
+    width: 180px;
   }
 }

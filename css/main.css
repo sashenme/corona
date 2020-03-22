@@ -63,7 +63,7 @@ body {
   border-radius: 8px;
   padding: 40px;
   border: none;
-  margin-top: 15vh;
+  margin-top: 5vh;
   margin-bottom: 3rem;
 }
 
@@ -103,6 +103,13 @@ body {
   border-color: #444b62;
 }
 
+.icon {
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
 @media (max-width: 768px) {
   #language {
     -webkit-box-orient: horizontal;
@@ -116,6 +123,10 @@ body {
   }
   .card {
     margin-top: 5vh;
+  }
+  .icon {
+    height: 180px;
+    width: 180px;
   }
 }
 /*# sourceMappingURL=main.css.map */

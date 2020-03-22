@@ -15,6 +15,7 @@ $(document).ready(function () {
     $("#q-list").hide()
     $("#q-subtitle").hide()
     $(".recommendation").hide();
+    // $(".questions").hide();
     $("#return").hide();
 
 
@@ -55,6 +56,9 @@ function showQuestion(q) {
         $("#return").hide();
     }
     if (q < questions.length) {
+        $(".icon").attr("src","img/icon-0"+q+".png");
+
+
         $("#q-title").html(questions[q].title);
         if ('subtile' in questions[q]) {
             $("#q-subtitle").show()
@@ -66,7 +70,9 @@ function showQuestion(q) {
         }
         if ('items' in questions[q]) {
             $("#q-list").show();
-
+            if(q == 4){
+                $("#q-list").html("");
+            }
             if ($("#q-list").is(':empty')) {
                 for (i = 0; i < questions[q].items.length; i++) {
 
