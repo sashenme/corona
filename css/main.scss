@@ -1,8 +1,10 @@
 $primary-color: #0fa791;
 $secondary-color: #444b62;
+$danger-color: #c50102;
 body {
   font-family: "Poppins";
   background: #eef0f6;
+  font-weight: 400;
 }
 .navbar {
   z-index: 2;
@@ -52,7 +54,7 @@ body {
   margin-top: 1rem;
 
   h1 {
-    font-weight: 600;
+    font-weight: 700;
     // font-size: 1.3rem;
     color: #21242e;
   }
@@ -75,9 +77,14 @@ body {
   }
   ul > li {
     color: $secondary-color;
-    line-height: 2;
+    line-height: 1.5;
     font-size: 1.3rem;
+    margin: 15px 0;
   }
+}
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
 }
 .buttons {
   margin-bottom: 3rem;
@@ -85,10 +92,7 @@ body {
     padding: 0.5rem 1.5rem;
   }
 
-  .btn-primary {
-    background-color: $primary-color;
-    border-color: $primary-color;
-  }
+  
   .btn-secondary-primary {
     color: #fff;
     background-color: $secondary-color;
@@ -102,6 +106,48 @@ body {
   margin: 0 auto;
   margin-bottom: 2rem;
 }
+.text-danger {
+  color: $danger-color !important;
+}
+.text-primary {
+  color: $primary-color !important;
+}
+.recommendation {
+  h1 {
+    font-size: 33px !important;
+    text-transform: uppercase;
+  }
+
+  p {
+    text-align: center;
+  }
+  .btn-danger {
+    background-color: $danger-color;
+  }
+  .btn {
+    margin: 15px auto;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 40px;
+  }
+  h4 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: $secondary-color;
+    line-height: 1.5;
+  }
+  a {
+    font-weight: 600;
+    margin: 14px auto;
+    border-bottom: 2px solid;
+  }
+  .link {
+    margin: 0 auto;
+    color: $secondary-color;
+  }
+}
+
 @media (max-width: 768px) {
   #language {
     flex-direction: row;
@@ -112,6 +158,20 @@ body {
   }
   .card {
     margin-top: 5vh;
+    padding: 30px;
+    h1 {
+      font-size: 20px;
+    }
+    p,
+    ul {
+      margin-top: 1rem;
+    }
+    p,
+    ul > li {
+      font-size: 16px;
+
+      line-height: 1.5;
+    }
   }
   .icon {
     height: 180px;

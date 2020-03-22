@@ -1,6 +1,7 @@
 body {
   font-family: "Poppins";
   background: #eef0f6;
+  font-weight: 400;
 }
 
 .navbar {
@@ -55,7 +56,7 @@ body {
 }
 
 .main-container h1 {
-  font-weight: 600;
+  font-weight: 700;
   color: #21242e;
 }
 
@@ -80,8 +81,14 @@ body {
 
 .card ul > li {
   color: #444b62;
-  line-height: 2;
+  line-height: 1.5;
   font-size: 1.3rem;
+  margin: 15px 0;
+}
+
+.btn-primary {
+  background-color: #0fa791;
+  border-color: #0fa791;
 }
 
 .buttons {
@@ -90,11 +97,6 @@ body {
 
 .buttons .btn {
   padding: 0.5rem 1.5rem;
-}
-
-.buttons .btn-primary {
-  background-color: #0fa791;
-  border-color: #0fa791;
 }
 
 .buttons .btn-secondary-primary {
@@ -110,6 +112,53 @@ body {
   margin-bottom: 2rem;
 }
 
+.text-danger {
+  color: #c50102 !important;
+}
+
+.text-primary {
+  color: #0fa791 !important;
+}
+
+.recommendation h1 {
+  font-size: 33px !important;
+  text-transform: uppercase;
+}
+
+.recommendation p {
+  text-align: center;
+}
+
+.recommendation .btn-danger {
+  background-color: #c50102;
+}
+
+.recommendation .btn {
+  margin: 15px auto;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 40px;
+}
+
+.recommendation h4 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #444b62;
+  line-height: 1.5;
+}
+
+.recommendation a {
+  font-weight: 600;
+  margin: 14px auto;
+  border-bottom: 2px solid;
+}
+
+.recommendation .link {
+  margin: 0 auto;
+  color: #444b62;
+}
+
 @media (max-width: 768px) {
   #language {
     -webkit-box-orient: horizontal;
@@ -123,6 +172,19 @@ body {
   }
   .card {
     margin-top: 5vh;
+    padding: 30px;
+  }
+  .card h1 {
+    font-size: 20px;
+  }
+  .card p,
+  .card ul {
+    margin-top: 1rem;
+  }
+  .card p,
+  .card ul > li {
+    font-size: 16px;
+    line-height: 1.5;
   }
   .icon {
     height: 180px;

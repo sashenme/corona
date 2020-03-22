@@ -7,7 +7,7 @@
     <title>DHSL - Self Corona Check</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -66,7 +66,7 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
                 <div class="card shadow questions">
-                    <img src="img/icon-00.png" alt="" class="icon">
+                    <img src="" alt="" class="icon" id="q-icon">
                     <h1 class="text-center" id="q-title"></h1>
                     <p class="text-center" id="q-subtitle"></p>
                     <ul id="q-list"></ul>
@@ -74,15 +74,16 @@
 
 
                 <div class="card shadow recommendation" id="rec-1">
-                    <h1 class="text-center text-success my-5">You are safe!</h1>
-                    <h3>Since you don’t have any symptoms for COVID-19 you do not need to be tested.
-                        But, you should Self-Quarantine.</h3>
+                    <img src="img/icon-1-info.png" alt="" class="icon">
+                    <h1 class="text-center ">You don’t need to be tested</h1>
+                    <h4 class="mt-3">Since you don’t have any symptoms for COVID-19 you do not need to be tested. But,
+                        you should Self-Quarantine.</h4>
+                    <a href="#" class="text-primary text-center">Read our easy Self - Quarantine Guide</a>
                     <p>
                         Testing is currently focused on individuals who have traveled outside Sri Lanka or had contact
                         with someone diagnosed as having COVID-19, or have developed symptoms of COVID-19.
                     </p>
-                    <p>However, there’s a chance you could get sick since it’s less than 14 days since your exposure.
-                        You should self-isolate until 14 days after the exposure.
+                    <p>However, there’s a chance you could get sick since you said you have been exposed
                     </p>
                     <ul>
                         <li>Please do not visit a hospital, physician’s office, lab or healthcare facility without
@@ -101,15 +102,15 @@
                         Nose, Sore Throat, Diarrhoea and want assessment contact: <a href="tel:1999">1999</a> or your
                         district MOH Office immediately
                     </p>
+                    <a class="text-center btn-primary btn-lg btn"  href="index.html">Start Over!</a>
                 </div>
                 <div class="card shadow recommendation" id="rec-2">
-                    <h1 class="text-center text-danger">2 Medium Risk</h1>
+                    <img src="img/icon-1-warning.png" alt="" class="icon">
+                    <h1 class="text-center ">You will need to Self-Quarantine</h1>
+
+                    <a href="#" class="text-primary text-center">Read our easy Self - Quarantine Guide</a>
                     <p>
-                        Based on the response you have provided, please call1999 or your district MOH Office
-                        immediately.
-                    </p>
-                    <p>Because you have ( or had ) symptoms, you need to self-quarantine until medical services reach
-                        you.
+                        Because you have some symptoms, you need to self-quarantine.
                     </p>
                     <ul>
                         <li>Please do not visit a hospital, physician’s office, lab or healthcare facility without
@@ -122,54 +123,68 @@
                             If you do need emergency medical assistance call <a href="tel:1999">1999</a> and let them
                             know you may have COVID-19</li>
                     </ul>
-
+                    <p>
+                        If your symptoms worsen, or if you are concerned, please call <a href="tel:1999">1999</a> or
+                        your district MOH office immediately.
+                    </p>
+                    <div class="row">
+                        <a class="text-center btn-primary btn-lg btn"  href="index.html">Start Over!</a>
+                    </div>
+                   
                 </div>
                 <div class="card shadow recommendation" id="rec-3">
-                    <h1 class="text-center text-danger">3 High Risk Tier 1</h1>
+                    <img src="img/icon-1-danger.png" alt="" class="icon">
+                    <h1 class="text-center text-danger">Call 1999 Immediately</h1>
                     <p>
-                        Contact <a href="tel:1999">1999</a> immediately, Avoid using public transportation to reach
-                        medical assistance, avoid close contact with anyone, Wear a face mask or cover your mouth and
-                        nose with some form of thick fabric, wash your hands with soap every 30 minutes or use alcohol
-                        based sanitizer until medical assistance gets to you. Read our self-quarantine guide.
+                        Avoid using public transportation to reach medical assistance, avoid close contact with anyone,
+                        Wear a face mask or cover your mouth and nose
+                        with some form of thick fabric, wash your hands with soap every 30 minutes or use alcohol based
+                        sanitizer until medical assistance gets to you. Read our self-quarantine guide.
                     </p>
-
-
+                    <div class="row">
+                        <a href="tel:1999" class="btn btn-danger btn-lg text-center my-4">Call Now</a>
+                    </div>
+                    <a class="text-center link"  href="index.html">Start Over!</a>
                 </div>
                 <div class="card shadow recommendation" id="rec-4">
-                    <h1 class="text-center text-danger">4 High Risk Tier 2</h1>
+                    <img src="img/icon-1-warning.png" alt="" class="icon">
+                    <h1 class="text-center ">You don’t need to be tested</h1>
+                    <h4 class="mt-3">But, you should Self-Quarantine because you have some symptoms</h4>
+                    <a href="#" class="text-primary text-center">Read our easy Self - Quarantine Guide</a>
                     <p>
-                        Contact <a href="tel:1999">1999</a> or Your district MOH Office immediately for assistance in
-                        assessing your condition,
-                        Avoid using public transportation to reach medical assistance, avoid close contact with anyone,
-                        Wear a face mask or cover your mouth and nose with some form of thick fabric, wash your hands
-                        with soap every 30 minutes or use alcohol based sanitizer until medical assistance gets to you.
-                        Read our self-quarantine guide.
+                        There are many common viruses other than COVID-19 that can cause your symptoms. Based on your
+                        responses you do not need to be tested for COVID-19 at this time.</p>
+                    <p>Testing is currently focused on individuals who have traveled outside Sri Lanka or had contact
+                        with someone diagnosed as having COVID-19, or have developed critical symptoms of COVID-19.</p>
+                    <p>Because you have some symptoms, you need to self-quarantine.</p>
+                    <ul>
+                        <li>Please do not visit a hospital, physician’s office, lab or healthcare facility without
+                            consulting <a href="tel:1999">1999</a> or your district MOH office.
+                        </li>
+                        <li>Don't go to any public places, stay at home, and don’t have any visitors.</li>
+                        <li>
+                            Don’t share personal items like dishes, cups, or towels and wash your hands often.</li>
+                        <li>
+                            If you do need emergency medical assistance call <a href="tel:1999">1999</a> and let them
+                            know you may have COVID-19</li>
+                    </ul>
+                    <p>
+                        If your symptoms worsen, or if you are concerned, please call <a href="tel:1999">1999</a> or
+                        your district MOH office immediately.
                     </p>
-
-
+                    <a class="text-center btn-primary btn-lg btn"  href="index.html">Start Over!</a>
                 </div>
                 <div class="card shadow recommendation" id="rec-5">
-                    <h1 class="text-center text-danger">5 High Risk Tier 3</h1>
-                    <p>
-                        Contact <a href="tel:1999">1999</a> or Your district MOH Office immediately for assistance in
-                        assessing your condition,
-                        Avoid using public transportation to reach medical assistance, avoid close contact with anyone,
-                        Wear a face mask or cover your mouth and nose with some form of thick fabric, wash your hands
-                        with soap every 30 minutes or use alcohol based sanitizer until medical assistance gets to you.
-                        Read our self-quarantine guide.
-                    </p>
+                    <img src="img/icon-1-info.png" alt="" class="icon">
+                    <h1 class="text-center ">You don’t need to be tested</h1>
+                    <h4 class="mt-3">Please follow the government's instructions.
+                    </h4>
 
-
-                </div>
-                <div class="card shadow recommendation" id="rec-6">
-                    <h1 class="text-center text-success">Neutral Risk</h1>
                     <p>
                         Testing is currently focused on individuals who have traveled outside Sri Lanka or had contact
-                        with someone diagnosed as having COVID-19, or have developed symptoms of COVID-19.
-                    </p>
-                    <p>If you do develop any COVID-19 symptoms, you must self-isolate for 14 days
+                        with someone diagnosed as having COVID-19, or have developed symptoms of COVID-19.</p>
 
-                    </p>
+                    <p>If you do develop any COVID-19 symptoms, you must self-isolate for 14 days</p>
                     <ul>
                         <li>Please do not visit a hospital, physician’s office, lab or healthcare facility without
                             consulting <a href="tel:1999">1999</a> or your district MOH office.
@@ -184,8 +199,8 @@
                     </ul>
                     <p>
                         If you are experiencing other symptoms like Tiredness, Aches and Pains, Nasal Congestion, Runny
-                        Nose, Sore Throat, Diarrhoea and want assessment contact: <a href="tel:1999">1999</a> or your
-                        district MOH Office immediately
+                        Nose, Sore Throat, Diarrhoea and want assessment contact: 1999 or your district MOH Office
+                        immediately.
                     </p>
                     <p>
                         Follow Government Regulations and Instructions Thoroughly, Avoid public places, and public
@@ -193,7 +208,9 @@
                         your hands for at least 20 seconds, Avoid touching your face.
 
                     </p>
+                    <a class="text-center btn-primary btn-lg btn"  href="index.html">Start Over!</a>
                 </div>
+
             </div>
         </div>
         <div class="row">
@@ -205,7 +222,7 @@
                     <br>
                     <button class="link btn mt-4" id="return">Return to previous question</button>
                 </div>
-
+              
             </div>
         </div>
     </div>

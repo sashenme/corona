@@ -6,7 +6,7 @@ var questions = [
     { title: "Do you have any of the following symptoms?", notsure: false, items: ["Tiredness", "Aches and Pains", "Nasal Congestion", "Runny Nose", "Sore Throat", "Diarrhoea"] },
     { title: "Travel & Social History", subtile: "Have you returned to Sri Lanka from any country within the last 14 days?  Or Have you been in contact with a confirmed or suspected COVID19 patient during the last 14 days?", notsure: true, }
 ];
-
+var gender = 1;
 var answers = [];
 
 $(document).ready(function () {
@@ -56,7 +56,8 @@ function showQuestion(q) {
         $("#return").hide();
     }
     if (q < questions.length) {
-        $(".icon").attr("src","img/icon-0"+q+".png");
+        
+        $("#q-icon").attr("src", "img/icon-" + gender + q + ".png");
 
 
         $("#q-title").html(questions[q].title);
@@ -70,7 +71,7 @@ function showQuestion(q) {
         }
         if ('items' in questions[q]) {
             $("#q-list").show();
-            if(q == 4){
+            if (q == 4) {
                 $("#q-list").html("");
             }
             if ($("#q-list").is(':empty')) {
@@ -108,17 +109,17 @@ function saveAnswers(answer) {
             showRecommendation("4");
         } else if (answers[1] == false && checkSymtoms() == true && answers[5] == false) {
             showRecommendation("4");
-        }else if (answers[1] == false && checkSymtoms() == false && answers[5] == true) {
+        } else if (answers[1] == false && checkSymtoms() == false && answers[5] == true) {
             showRecommendation("1");
-        }else if (answers[1] == false && checkSymtoms() == true && answers[5] == true) {
+        } else if (answers[1] == false && checkSymtoms() == true && answers[5] == true) {
             showRecommendation("3");
-        }else if (answers[1] == true && checkSymtoms() == true && answers[5] == true) {
+        } else if (answers[1] == true && checkSymtoms() == true && answers[5] == true) {
             showRecommendation("3");
-        }else if (answers[1] == true && checkSymtoms() == true && answers[5] == false) {
+        } else if (answers[1] == true && checkSymtoms() == true && answers[5] == false) {
             showRecommendation("2");
-        }else if (answers[1] == true && checkSymtoms() == false && answers[5] == true) {
+        } else if (answers[1] == true && checkSymtoms() == false && answers[5] == true) {
             showRecommendation("2");
-        }else if (answers[1] == false && checkSymtoms() == false && answers[5] == false) {
+        } else if (answers[1] == false && checkSymtoms() == false && answers[5] == false) {
             showRecommendation("5");
         }
 
