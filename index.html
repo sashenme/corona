@@ -8,11 +8,87 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        .loading {
+            position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #1ca093cf;
+        }
+        .lds-ellipsis {
+  display: inline-block;
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+    </style>
 </head>
 
 
 <body ng-app="at">
-    <nav class="ng-scope navbar navbar-expand-lg navbar-dark" ng-controller="Ctrl">
+    <div class="loading">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+
+    <nav class="ng-scope navbar navbar-expand-lg navbar-dark main-container" ng-controller="Ctrl">
         <a class="navbar-brand" href="index.html">
             <img src="img/dhsl.svg" alt="ata" width="120">
         </a>
@@ -70,14 +146,15 @@
                 <div class="card shadow gender">
                     <h4 class="text-center mb-5" translate="selectGender"><strong>Select Gender</strong></h4>
                     <div class="row">
-                        <div class="col-6">
-                            <img src="img/icon-0-info.png" alt="" class="icon" id="btn-female">
-                            <p class="text-center" translate="female">Female</p>
-                        </div>
+                       
                         <div class="col-6">
 
-                            <img src="img/icon-1-info.png" alt="" class="icon" id="btn-male">
-                            <p class="text-center" translate="male">Male</p>
+                            <img src="img/icon-1-info.png" alt="" class="icon btn-male" id="btn-male">
+                            <p class="text-center btn-male" translate="male">Male</p>
+                        </div>
+                        <div class="col-6">
+                            <img src="img/icon-0-info.png" alt="" class="icon btn-female" id="btn-female">
+                            <p class="text-center btn-female" translate="female">Female</p>
                         </div>
                     </div>
                 </div>
@@ -92,7 +169,8 @@
                 <div class="card shadow recommendation" id="rec-1">
                     <img src="img/icon-0-info.png" alt="" class="icon icon-info">
                     <h1 class="text-center " translate="notTestTitle">You don’t need to be tested</h1>
-                    <h4 class="mt-3" translate="rec1H1">Since you don’t have any symptoms for COVID-19 you do not need to be tested. But, you should Self-Quarantine.</h4>
+                    <h4 class="mt-3" translate="rec1H1">Since you don’t have any symptoms for COVID-19 you do not need
+                        to be tested. But, you should Self-Quarantine.</h4>
                     <a translate="readGuide" href="#guide" class="text-primary text-center">Read our easy Self -
                         Quarantine Guide</a>
                     <p translate="rec1P1">
@@ -111,7 +189,7 @@
                             visitors.</li>
                         <li translate="dontSharePersonal">
                             Don’t share personal items like dishes, cups, or towels and wash your hands often.</li>
-                        <li translate="ifYouDoDvelopFever">
+                        <li translate="ifYouDoDevelopFever">
                             If you do develop any Fever or Dry Cough or Difficulty in Breathing, take this
                             self-assessment again or Call <a href='tel:1999'>1999</a> or your district MOH office
                             immediately.</li>
@@ -165,22 +243,26 @@
                         sanitizer until medical assistance gets to you. Read our self-quarantine guide.
                     </p>
                     <div class="row">
-                        <a href='tel:1999' class="btn btn-danger btn-lg text-center my-4" translate="callNow">Call Now</a>
+                        <a href='tel:1999' class="btn btn-danger btn-lg text-center my-4" translate="callNow">Call
+                            Now</a>
                     </div>
                     <a class="text-center link" href="index.html" translate="startOver">Start Over!</a>
                 </div>
                 <div class="card shadow recommendation" id="rec-4">
                     <img src="img/icon-0-warning.png" alt="" class="icon icon-warning">
                     <h1 class="text-center " translate="notTestTitle">You don’t need to be tested</h1>
-                    <h4 class="mt-3" translate="rec4h1">But, you should Self-Quarantine because you have some symptoms</h4>
+                    <h4 class="mt-3" translate="rec4h1">But, you should Self-Quarantine because you have some symptoms
+                    </h4>
                     <a translate="readGuide" href="#guide" class="text-primary text-center">Read our easy Self -
                         Quarantine Guide</a>
                     <p translate="rec4P1">
                         There are many common viruses other than COVID-19 that can cause your symptoms. Based on your
                         responses you do not need to be tested for COVID-19 at this time.</p>
-                    <p translate="rec4P2">Testing is currently focused on individuals who have traveled outside Sri Lanka or had contact
+                    <p translate="rec4P2">Testing is currently focused on individuals who have traveled outside Sri
+                        Lanka or had contact
                         with someone diagnosed as having COVID-19, or have developed critical symptoms of COVID-19.</p>
-                    <p translate="BecauseYouHaveSymtoms">Because you have some symptoms, you need to self-quarantine.</p>
+                    <p translate="BecauseYouHaveSymtoms">Because you have some symptoms, you need to self-quarantine.
+                    </p>
                     <ul>
                         <li translate="dontVisitHospital">Please do not visit a hospital, physician’s office, lab or
                             healthcare facility without
@@ -211,7 +293,8 @@
                         Testing is currently focused on individuals who have traveled outside Sri Lanka or had contact
                         with someone diagnosed as having COVID-19, or have developed symptoms of COVID-19.</p>
 
-                    <p translate="stay14Days">If you do develop any COVID-19 symptoms, you must self-isolate for 14 days</p>
+                    <p translate="stay14Days">If you do develop any COVID-19 symptoms, you must self-isolate for 14 days
+                    </p>
                     <ul>
                         <li translate="dontVisitHospital">Please do not visit a hospital, physician’s office, lab or
                             healthcare facility without
@@ -221,7 +304,7 @@
                             visitors.</li>
                         <li translate="dontSharePersonal">
                             Don’t share personal items like dishes, cups, or towels and wash your hands often.</li>
-                        <li translate="ifYouDoDvelopFever">
+                        <li translate="ifYouDoDevelopFever">
                             If you do develop any Fever or Dry Cough or Difficulty in Breathing, take this
                             self-assessment again or Call <a href='tel:1999'>1999</a> or your district MOH office
                             immediately.</li>
@@ -263,6 +346,7 @@
                         <li translate="guideL8"></li>
                         <li translate="guideL9"></li>
                         <li translate="guideL10"></li>
+                        <li translate="guideL11"></li>
                     </ol>
 
                 </div>
@@ -278,7 +362,8 @@
                     <button class="link btn mt-4" id="return" translate="returnBack">Return to previous
                         question</button>
                 </div>
-
+                <p class="text-center small text-secondary">Made with <span style="color: #e25555;">&hearts;</span> by
+                    <a href="https://github.com/SashenMe" target="_blank">@SashenMe</a></p>
             </div>
         </div>
     </div>

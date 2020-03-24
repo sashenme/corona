@@ -1,11 +1,4 @@
-// var englishQ = [ 
-//     { title: "Are you experiencing any of the following conditions?", notsure: false, items: ["Severe difficulty breathing (e.g., Struggling for each breath, Speaking in single words)", "Severe chest pain", "Feeling confused or disoriented"] },
-//     { title: "Do you have fever?", subtile: "A fever is considered when your body temperature is above 98.6 F or 37 C", notsure: false },
-//     { title: "Do you have a dry cough?", notsure: false },
-//     { title: "Do you have any difficulty in breathing?", notsure: false },
-//     { title: "Do you have any of the following symptoms?", notsure: false, items: ["Tiredness", "Aches and Pains", "Nasal Congestion", "Runny Nose", "Sore Throat", "Diarrhoea"] },
-//     { title: "Travel & Social History", subtile: "Have you returned to Sri Lanka from any country within the last 14 days?  Or Have you been in contact with a confirmed or suspected COVID19 patient during the last 14 days?", notsure: true, }
-// ];
+
 
 var questionsLK = [{
         title: "ඔබ පහත සඳහන් සෞඛ්‍ය  තත්වයන්  වලින් එකක් හෝ අත්විඳිනවාද?",
@@ -95,6 +88,7 @@ var questionsTA = [{
         subtile: "நீங்கள் கடந்த 14 நாட்களுக்குள் வெளிநாடுகளில் இருந்து இலங்கைக்கு திரும்பியிருக்கிறீர்களா? அல்லது கடந்த 14 நாட்களில் உறுதிப்படுத்தப்பட்ட அல்லது சந்தேகிக்கப்பட்ட COVID19 நோயாளியுடன் நீங்கள் தொடர்பு கொண்டுள்ளீர்களா? ",
         notsure: true,
     }
+
 ];
 
 
@@ -103,6 +97,13 @@ var language = 'english';
 var gender = 0;
 var answers = [];
 var currentQuestion = 0;
+
+$(window).load(function() {
+    // Animate loader off screen
+    $(".loading").fadeOut("slow");;
+});
+
+
 
 $(document).ready(function () {
     questions = questionsEN;
@@ -117,10 +118,10 @@ $(document).ready(function () {
     $(".guide").hide();
 
 
-    $("#btn-male").click(function () {
+    $(".btn-male").click(function () {
         startQuestionare(1);
     });
-    $("#btn-female").click(function () {
+    $(".btn-female").click(function () {
         startQuestionare(0);
     });
 

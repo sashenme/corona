@@ -44,16 +44,12 @@ app.config(function ($translateProvider) {
     call1999: "Call <a href='tel:1999'>1999</a> Immediately",
     rec3P1: "Avoid using public transportation to reach medical assistance, avoid close contact with anyone, Wear a face mask or cover your mouth and nose with some form of thick fabric, wash your hands with soap every 30 minutes or use alcohol based sanitizer until medical assistance gets to you. Read our self-quarantine guide.",
     rec4h1: "But, you should Self-Quarantine because you have some symptoms",
-    rec4P1: "There are many common viruses other than COVID-19 that can cause your symptoms. Based on your responses you do not need to be tested for COVID-19 at this time",
-    rec4P2: "Testing is currently focused on individuals who have traveled outside Sri Lanka or had contact with someone diagnosed as having COVID-19, or have developed critical symptoms of COVID-19.",
-    pleaseFollow: "Please follow the government's instructions.",
-    stay14Days: "If you do develop any COVID-19 symptoms, you must self-isolate for 14 days",
-    followGovertmentRules: "  Follow Government Regulations and Instructions Thoroughly, Avoid public places, and public transportation at all time, Wear a face mask, Wash your hands with soap every 30 minutes, wash your hands for at least 20 seconds, Avoid touching your face.",
-    callNow: "Call Now",
-
-
-
-
+    rec4P1:"There are many common viruses other than COVID-19 that can cause your symptoms. Based on your responses you do not need to be tested for COVID-19 at this time",
+    rec4P2:"Testing is currently focused on individuals who have traveled outside Sri Lanka or had contact with someone diagnosed as having COVID-19, or have developed critical symptoms of COVID-19.",
+    pleaseFollow:"Please follow the government's instructions.",
+    stay14Days:"If you do develop any COVID-19 symptoms, you must self-isolate for 14 days",
+    followGovertmentRules:"  Follow Government Regulations and Instructions Thoroughly, Avoid public places, and public transportation at all time, Wear a face mask, Wash your hands with soap every 30 minutes, wash your hands for at least 20 seconds, Avoid touching your face.",
+    callNow:"Call Now",   
     rec1P4: "If you are experiencing other symptoms like Tiredness, Aches and Pains, Nasal Congestion, Runny Nose, Sore Throat, Diarrhoea and want assessment contact: <a href='tel:1999'>1999</a> or your district MOH Office immediately",
 
   });
@@ -106,6 +102,8 @@ app.config(function ($translateProvider) {
     stay14Days: "ඔබට කොවිඩ්-19 රෝග ලක්ෂණ මඳ අයුරින් හෝ ඇති වුවහොත් හෝ ඇති වීමට ඇති අවධානමක් ඇති නම් දින 14 ක් ස්වයං නිරෝධායනය වීම අනිවාර්ය වේ",
     followGovertmentRules: "ඔබගේ පිඟාන , කෝප්පය , තුවා වැනි පුද්ගලික ද්‍රව්‍ය වෙන්කර  තබන්න , සෑම විනාඩි 30 කට සැරයක් හෝ යම්කිසි කාර්යක් කිරීමට පෙර හෝ කිරීමෙන් අනතුරුව ඔබගේ අත් හොඳින් සබන් ගා අඩුම තප්පර 20ක් සෝදන්න, නැතිනම් මද්‍යසාර සහිත විෂබීජ නාශකයක් ආධාරයෙන් අත්වල ඇති විෂබීජ විනාශ කරන්න.",
     callNow: "දැන්ම අමතන්න",
+     rec1P4:"ඔබට කැස්ස, උණ, හුස්ම ගැනීමේ අපහසුතාවයක්, මහන්සි ගතිය, ඇඟේ පතේ රිදීමක්, නාසයේ සිරවුම් ගතියක්, හොටු දියර ගැලීම, උගුරේ අමාරුව, පාචනය වැනි තත්වයක් ඇති  වුවහොත් මෙම ස්වයං පරීක්ෂාව නැවත කර අදාල නිර්දේශ අනුගමනය කරන්න. රෝග ලක්ෂණ බරපතල  මට්ටමක තිබේ නම් කරුණාකර <a href='tel:1999'>1999</a> සුව සැරිය ඒකකය අමතන්න."
+
   });
   // Tamil translation
   // Source: https://drive.google.com/file/d/1MmGLE6QF6mWfIKBjV6dO56u0N-Y-UOuv/view?ts=5e7a40cd
@@ -158,9 +156,7 @@ app.config(function ($translateProvider) {
     stay14Days: "நீங்கள் Covid -19 தொடர்பான அறிகுறிகளை கொண்டிருந்தால் 14 நாட்களுக்கு உங்களை கட்டாயம்  சுய தனிமைபடுத்த வேண்டும்.",
     followGovertmentRules: "அரசாங்க விதிமுறைகள் மற்றும் வழிமுறைகளை முழுமையாகப் பின்பற்றுங்கள், எல்லா நேரங்களிலும் பொது இடங்களுக்கு செல்லுதல் மற்றும் பொது போக்குவரத்தை தவிர்க்கவும், முகமூடியை அணியுங்கள், ஒவ்வொரு 30 நிமிடங்களுக்கும் சோப்புடன் கைகளை கழுவவும், குறைந்தது 20 விநாடிகளுக்கு கைகளை கழுவும் பொறிமுறையை கொண்டிருங்கள். உங்கள் முகத்தைத் தொடுவதைத் தவிர்க்கவும்.",
     callNow: "தொடர்பு கொள்க‌",
-
     rec1P4: "சோர்வு , குடைச்சல் மற்றும் வலிகள், மூக்கடைப்பு ,மூக்கு ஒழுகுதல் ,தொண்டை வலி, வயிற்றுப்போக்கு போன்ற பிற அறிகுறிகளை நீங்கள் சந்திக்கிறீர்கள் ஆகில் நீங்கள் உடனடியாக தொலைபேசி இல  <a href='tel:1999'>1999</a> அல்லது  உங்கள் மாவட்ட MOH அலுவலகத்திற்கு அழைத்து உங்களை மதிப்பீடு செய்ய வேண்டும்.",
-
   });
   $translateProvider.preferredLanguage("en");
 });

@@ -1,9 +1,28 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'NotoSans';
+  /* Define the custom font name */
+  src: url("../fonts/NotoSansSinhala-Regular.ttf");
+  unicode-range: U+0D80—0DFF;
+  /* Define the available characters */
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  /* Define the custom font name */
+  src: url("../fonts/NotoSansSinhala-ExtraBold.ttf");
+  unicode-range: U+0D80—0DFF;
+  /* Define the available characters */
+  font-weight: 600;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Poppins";
+  font-family: "Poppins",NotoSans;
   background: #eef0f6;
   font-weight: 400;
 }
@@ -45,7 +64,7 @@ body {
 
 #language {
   position: absolute;
-  right: 0;
+  right: 15px;
 }
 
 #language .nav-link {
@@ -60,7 +79,17 @@ body {
 }
 
 .main-container {
+  margin: 0 auto;
   margin-top: 1rem;
+  max-width: 1890px;
+}
+
+.main-container a {
+  text-decoration: none !important;
+}
+
+.main-container a:hover {
+  color: #074940;
 }
 
 .main-container h1 {
@@ -130,6 +159,7 @@ body {
 
 .buttons .btn {
   padding: 0.5rem 1.5rem;
+  margin-bottom: 5px;
 }
 
 .buttons .btn-secondary-primary {
@@ -229,8 +259,8 @@ body {
     line-height: 1.5;
   }
   .icon {
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 150px;
   }
   .gender .icon {
     width: 150px;
@@ -238,6 +268,31 @@ body {
   }
   .guide h1 {
     font-size: 32px;
+  }
+}
+
+@media (min-height: 980px) {
+  .card {
+    padding: 55px 70px;
+  }
+}
+
+@media (max-width: 320px) {
+  .gender .icon {
+    width: 120px;
+    height: 120px;
+  }
+  .card {
+    padding: 20px;
+  }
+  .bg-solid {
+    top: 50vh;
+  }
+  .bg-wrap {
+    height: 60vh;
+  }
+  #language .nav-link {
+    font-size: 10px;
   }
 }
 /*# sourceMappingURL=main.css.map */

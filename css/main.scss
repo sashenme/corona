@@ -1,11 +1,25 @@
 $primary-color: #0fa791;
 $secondary-color: #444b62;
 $danger-color: #c50102;
+
+@font-face {
+  font-family: 'NotoSans'; /* Define the custom font name */
+  src:  url('../fonts/NotoSansSinhala-Regular.ttf');
+  unicode-range: U+0D80—0DFF; /* Define the available characters */
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'NotoSans'; /* Define the custom font name */
+  src:  url('../fonts/NotoSansSinhala-ExtraBold.ttf');
+  unicode-range: U+0D80—0DFF; /* Define the available characters */
+  font-weight: 600;
+}
+
 html{
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Poppins";
+  font-family: "Poppins",NotoSans;
   background: #eef0f6;
   font-weight: 400;
 }
@@ -44,7 +58,8 @@ body {
 
 #language {
   position: absolute;
-  right: 0;
+  right: 15px; 
+
   .nav-link {
     border-radius: 60px;
     padding: 5px 15px;
@@ -57,8 +72,15 @@ body {
 }
 
 .main-container {
+  margin: 0 auto;
   margin-top: 1rem;
-
+  max-width: 1890px;
+  a{
+   text-decoration: none !important; 
+  }
+  a:hover{
+    color: darken($color: $primary-color, $amount: 20%);
+  }
   h1 {
     font-weight: 700;
     // font-size: 1.3rem;
@@ -118,6 +140,7 @@ body {
   margin-bottom: 3rem;
   .btn {
     padding: 0.5rem 1.5rem;
+    margin-bottom: 5px;
   }
 
   .btn-secondary-primary {
@@ -212,8 +235,8 @@ body {
     }
   }
   .icon {
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 150px;
   }
   .gender {
     .icon {
@@ -226,4 +249,32 @@ body {
       font-size: 32px;
     }
   }
+}
+@media(min-height:980px){
+  .card{
+    padding:55px 70px;
+  }
+}
+@media(max-width:320px){
+  .gender {
+    .icon {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  .card {
+    padding:20px;
+  }
+  .bg-solid {
+    // border-top-left-radius: 20% 15%;
+    // border-top-right-radius: 20% 15%;
+    top: 50vh;
+  }
+  .bg-wrap{
+    height: 60vh;
+  }
+  #language .nav-link{
+    font-size: 10px;
+  }
+  
 }
