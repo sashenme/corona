@@ -44,10 +44,10 @@ $(document).ready(function () {
     $(".guide").hide();
 
 
-    $("#btn-male").click(function () {
+    $(".btn-male").click(function () {
         startQuestionare(1);
     });
-    $("#btn-female").click(function () {
+    $(".btn-female").click(function () {
         startQuestionare(0);
     });
 

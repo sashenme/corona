@@ -1,9 +1,28 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'NotoSans';
+  /* Define the custom font name */
+  src: url("../fonts/NotoSansSinhala-Regular.ttf");
+  unicode-range: U+0D80—0DFF;
+  /* Define the available characters */
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  /* Define the custom font name */
+  src: url("../fonts/NotoSansSinhala-ExtraBold.ttf");
+  unicode-range: U+0D80—0DFF;
+  /* Define the available characters */
+  font-weight: 600;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Poppins";
+  font-family: "Poppins",NotoSans;
   background: #eef0f6;
   font-weight: 400;
 }
