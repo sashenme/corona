@@ -60,6 +60,11 @@ body {
   color: #21242e;
 }
 
+.main-container h2 {
+  font-weight: 700;
+  font-size: 25px;
+}
+
 .card {
   border-radius: 8px;
   padding: 40px;
@@ -163,6 +168,10 @@ body {
   color: #444b62;
 }
 
+.guide h1 {
+  color: #0fa791 !important;
+}
+
 @media (max-width: 768px) {
   #language {
     -webkit-box-orient: horizontal;
@@ -197,6 +206,9 @@ body {
   .gender .icon {
     width: 150px;
     height: 150px;
+  }
+  .guide h1 {
+    font-size: 32px;
   }
 }
 /*# sourceMappingURL=main.css.map */

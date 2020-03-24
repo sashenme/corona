@@ -58,6 +58,10 @@ body {
     // font-size: 1.3rem;
     color: #21242e;
   }
+  h2 {
+    font-weight: 700;
+    font-size: 25px;
+  }
 }
 .card {
   border-radius: 8px;
@@ -92,7 +96,6 @@ body {
     padding: 0.5rem 1.5rem;
   }
 
-  
   .btn-secondary-primary {
     color: #fff;
     background-color: $secondary-color;
@@ -106,8 +109,8 @@ body {
   margin: 0 auto;
   margin-bottom: 2rem;
 }
-.gender{
-  .icon{
+.gender {
+  .icon {
     display: block;
   }
 }
@@ -152,6 +155,11 @@ body {
     color: $secondary-color;
   }
 }
+.guide {
+  h1 {
+    color: $primary-color !important;
+  }
+}
 
 @media (max-width: 768px) {
   #language {
@@ -182,10 +190,15 @@ body {
     height: 180px;
     width: 180px;
   }
-  .gender{
-    .icon{
+  .gender {
+    .icon {
       width: 150px;
       height: 150px;
+    }
+  }
+  .guide {
+    h1 {
+      font-size: 32px;
     }
   }
 }
