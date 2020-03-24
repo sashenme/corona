@@ -32,6 +32,13 @@ var gender = 0;
 var answers = [];
 var currentQuestion = 0;
 
+$(window).load(function() {
+    // Animate loader off screen
+    $(".loading").fadeOut("slow");;
+});
+
+
+
 $(document).ready(function () {
     questions = questionsEN;
     //Starting Screen
