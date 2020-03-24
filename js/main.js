@@ -1,3 +1,20 @@
+// var englishQ = [ 
+//     { title: "Are you experiencing any of the following conditions?", notsure: false, items: ["Severe difficulty breathing (e.g., Struggling for each breath, Speaking in single words)", "Severe chest pain", "Feeling confused or disoriented"] },
+//     { title: "Do you have fever?", subtile: "A fever is considered when your body temperature is above 98.6 F or 37 C", notsure: false },
+//     { title: "Do you have a dry cough?", notsure: false },
+//     { title: "Do you have any difficulty in breathing?", notsure: false },
+//     { title: "Do you have any of the following symptoms?", notsure: false, items: ["Tiredness", "Aches and Pains", "Nasal Congestion", "Runny Nose", "Sore Throat", "Diarrhoea"] },
+//     { title: "Travel & Social History", subtile: "Have you returned to Sri Lanka from any country within the last 14 days?  Or Have you been in contact with a confirmed or suspected COVID19 patient during the last 14 days?", notsure: true, }
+// ];
+
+// var sinhalaQ = [ 
+//     { title: "ඔබ පහත සඳහන් සෞඛ්‍ය  තත්වයන්  වලින් එකක් හෝ අත්විඳිනවාද?", notsure: false, items: ["හුස්ම ගැනීමේ දැඩි අපහසුතාවයක් (කතා කිරීමට වත් නොහැකි අයුරෙන් )", "පපුවේ තද ගතියක් හෝ වේදනාවක්", "මානසික ව්‍යාකුලතාවයක්"] },
+//     { title: "Do you have fever?", subtile: "A fever is considered when your body temperature is above 98.6 F or 37 C", notsure: false },
+//     { title: "Do you have a dry cough?", notsure: false },
+//     { title: "Do you have any difficulty in breathing?", notsure: false },
+//     { title: "Do you have any of the following symptoms?", notsure: false, items: ["Tiredness", "Aches and Pains", "Nasal Congestion", "Runny Nose", "Sore Throat", "Diarrhoea"] },
+//     { title: "Travel & Social History", subtile: "Have you returned to Sri Lanka from any country within the last 14 days?  Or Have you been in contact with a confirmed or suspected COVID19 patient during the last 14 days?", notsure: true, }
+// ];
 var questions = [
     { title: "Are you experiencing any of the following conditions?", notsure: false, items: ["Severe difficulty breathing (e.g., Struggling for each breath, Speaking in single words)", "Severe chest pain", "Feeling confused or disoriented"] },
     { title: "Do you have fever?", subtile: "A fever is considered when your body temperature is above 98.6 F or 37 C", notsure: false },
@@ -6,6 +23,10 @@ var questions = [
     { title: "Do you have any of the following symptoms?", notsure: false, items: ["Tiredness", "Aches and Pains", "Nasal Congestion", "Runny Nose", "Sore Throat", "Diarrhoea"] },
     { title: "Travel & Social History", subtile: "Have you returned to Sri Lanka from any country within the last 14 days?  Or Have you been in contact with a confirmed or suspected COVID19 patient during the last 14 days?", notsure: true, }
 ];
+
+
+
+var language = 'english';
 var gender = 0;
 var answers = [];
 
@@ -31,7 +52,7 @@ $(document).ready(function () {
 
     function startQuestionare(getGender) {
 
-      
+
         gender = getGender;
         $(".gender").hide();
         $(".questions").show(); //
@@ -59,23 +80,23 @@ $(document).ready(function () {
             saveAnswers(false);
             q++;
             showQuestion(q);
-    
+
         });
-    
+
         $("#return").click(function () {
             q--;
             showQuestion(q);
             answers.pop();
             $("#btn-notsure").hide();
         });
-    
+
     }
 
 
 
 
 
-    
+
 });
 
 
