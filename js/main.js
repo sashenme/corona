@@ -7,22 +7,94 @@
 //     { title: "Travel & Social History", subtile: "Have you returned to Sri Lanka from any country within the last 14 days?  Or Have you been in contact with a confirmed or suspected COVID19 patient during the last 14 days?", notsure: true, }
 // ];
 
-var questionsLK = [
-    { title: "ඔබ පහත සඳහන් සෞඛ්‍ය  තත්වයන්  වලින් එකක් හෝ අත්විඳිනවාද?", notsure: false, items: ["හුස්ම ගැනීමේ දැඩි අපහසුතාවයක් (කතා කිරීමට වත් නොහැකි අයුරෙන් )", "පපුවේ තද ගතියක් හෝ වේදනාවක්", "මානසික ව්‍යාකුලතාවයක්"] },
-    { title: " ඔබට උණ තත්වයක්  දැනට තිබේද?", subtile: "උණ තත්වයක් යනු ශරීර උෂ්ණත්වය සෙල්සියස් 37 හෝ ෆැරනයිට් 98.6 ට වැඩි විය යුතුය", notsure: false },
-    { title: "ඔබට වියලි කැස්සක් තිබේද?", notsure: false },
-    { title: "ඔබට හුස්ම ගැනීමේ අපහසුතාවයක් තිබේද?", notsure: false },
-    { title: "ඔබට පහත සඳහන් අමතර රෝග ලක්ෂණ තිබේද?", notsure: false, items: ["මහන්සි ගතිය", "ඇඟේ පතේ රිදීමක් ", "නාසයේ සිරවුම් ගතියක්", "හොටු දියර ගැලීම", "උගුරේ අමාරුව", "පාචනය"] },
-    { title: "සංචරණ හා සමාජ අන්තර්ක්‍රියා", subtile: " ඔබ පසුගිය දින 14 තුල ශ්‍රී ලංකාවෙන් පිටත සංචරණය යෙදුනාද ? හෝ ඔබ පසුගිය දින 14 තුල  කොරෝනා වෛරසය වැළඳුනු හෝ වැළඳුනු යැයි සැක සහිත පුද්ගලයෙකු ඇසුරක යෙදුනාද?", notsure: true, }
+var questionsLK = [{
+        title: "ඔබ පහත සඳහන් සෞඛ්‍ය  තත්වයන්  වලින් එකක් හෝ අත්විඳිනවාද?",
+        notsure: false,
+        items: ["හුස්ම ගැනීමේ දැඩි අපහසුතාවයක් (කතා කිරීමට වත් නොහැකි අයුරෙන් )", "පපුවේ තද ගතියක් හෝ වේදනාවක්", "මානසික ව්‍යාකුලතාවයක්"]
+    },
+    {
+        title: " ඔබට උණ තත්වයක්  දැනට තිබේද?",
+        subtile: "උණ තත්වයක් යනු ශරීර උෂ්ණත්වය සෙල්සියස් 37 හෝ ෆැරනයිට් 98.6 ට වැඩි විය යුතුය",
+        notsure: false
+    },
+    {
+        title: "ඔබට වියලි කැස්සක් තිබේද?",
+        notsure: false
+    },
+    {
+        title: "ඔබට හුස්ම ගැනීමේ අපහසුතාවයක් තිබේද?",
+        notsure: false
+    },
+    {
+        title: "ඔබට පහත සඳහන් අමතර රෝග ලක්ෂණ තිබේද?",
+        notsure: false,
+        items: ["මහන්සි ගතිය", "ඇඟේ පතේ රිදීමක් ", "නාසයේ සිරවුම් ගතියක්", "හොටු දියර ගැලීම", "උගුරේ අමාරුව", "පාචනය"]
+    },
+    {
+        title: "සංචරණ හා සමාජ අන්තර්ක්‍රියා",
+        subtile: " ඔබ පසුගිය දින 14 තුල ශ්‍රී ලංකාවෙන් පිටත සංචරණය යෙදුනාද ? හෝ ඔබ පසුගිය දින 14 තුල  කොරෝනා වෛරසය වැළඳුනු හෝ වැළඳුනු යැයි සැක සහිත පුද්ගලයෙකු ඇසුරක යෙදුනාද?",
+        notsure: true,
+    }
 ];
 
-var questionsEN = [
-    { title: "Are you experiencing any of the following conditions?", notsure: false, items: ["Severe difficulty breathing (e.g., Struggling for each breath, Speaking in single words)", "Severe chest pain", "Feeling confused or disoriented"] },
-    { title: "Do you have fever?", subtile: "A fever is considered when your body temperature is above 98.6 F or 37 C", notsure: false },
-    { title: "Do you have a dry cough?", notsure: false },
-    { title: "Do you have any difficulty in breathing?", notsure: false },
-    { title: "Do you have any of the following symptoms?", notsure: false, items: ["Tiredness", "Aches and Pains", "Nasal Congestion", "Runny Nose", "Sore Throat", "Diarrhoea"] },
-    { title: "Travel & Social History", subtile: "Have you returned to Sri Lanka from any country within the last 14 days?  Or Have you been in contact with a confirmed or suspected COVID19 patient during the last 14 days?", notsure: true, }
+var questionsEN = [{
+        title: "Are you experiencing any of the following conditions?",
+        notsure: false,
+        items: ["Severe difficulty breathing (e.g., Struggling for each breath, Speaking in single words)", "Severe chest pain", "Feeling confused or disoriented"]
+    },
+    {
+        title: "Do you have fever?",
+        subtile: "A fever is considered when your body temperature is above 98.6 F or 37 C",
+        notsure: false
+    },
+    {
+        title: "Do you have a dry cough?",
+        notsure: false
+    },
+    {
+        title: "Do you have any difficulty in breathing?",
+        notsure: false
+    },
+    {
+        title: "Do you have any of the following symptoms?",
+        notsure: false,
+        items: ["Tiredness", "Aches and Pains", "Nasal Congestion", "Runny Nose", "Sore Throat", "Diarrhoea"]
+    },
+    {
+        title: "Travel & Social History",
+        subtile: "Have you returned to Sri Lanka from any country within the last 14 days?  Or Have you been in contact with a confirmed or suspected COVID19 patient during the last 14 days?",
+        notsure: true,
+    }
+];
+
+var questionsTA = [{
+        title: "பின்வரும் நிபந்தனைகளில் ஏதேனும் ஒன்றை நீங்கள் சந்திக்கிறீர்களா?",
+        notsure: false,
+        items: ["மூச்சு விடுவதில் கடுமையான சிரமம் (உதாரணம் , ஒவ்வொரு சுவாசத்திற்கும் போராடுவது, ஒற்றை வார்த்தைகளில் பேசுவது", "கடுமையான நெஞ்சு வலி", "குழப்பம் அல்லது  திசை திருப்பப்பட்ட உணர்வு"]
+    },
+    {
+        title: "உங்களுக்கு காய்ச்சல் இருக்கிறதா?",
+        subtile: "(உங்கள் உடல் வெப்பநிலை 98.6 F அல்லது 37 C க்கு மேல் இருக்கும்போது காய்ச்சல் கருதப்படுகிறது)",
+        notsure: false
+    },
+    {
+        title: "வறட்டு இருமல் இருக்கிறதா?",
+        notsure: false
+    },
+    {
+        title: "சுவாசிப்பதில் உங்களுக்கு ஏதாவது சிரமம் இருக்கிறதா?",
+        notsure: false
+    },
+    {
+        title: "உங்களுக்கு பின்வரும் அறிகுறிகள் ஏதேனும் உள்ளதா?",
+        notsure: false,
+        items: ["சோர்வு", "குடைச்சலும் வலியும்", "மூக்கடைப்பு", "மூக்கு ஒழுகுதல்", "தொண்டை வலி", "வயிற்றுப்போக்கு"]
+    },
+    {
+        title: "பயணம் மற்றும் சமூக வரலாறு",
+        subtile: "நீங்கள் கடந்த 14 நாட்களுக்குள் வெளிநாடுகளில் இருந்து இலங்கைக்கு திரும்பியிருக்கிறீர்களா? அல்லது கடந்த 14 நாட்களில் உறுதிப்படுத்தப்பட்ட அல்லது சந்தேகிக்கப்பட்ட COVID19 நோயாளியுடன் நீங்கள் தொடர்பு கொண்டுள்ளீர்களா? ",
+        notsure: true,
+    }
 ];
 
 
@@ -103,6 +175,10 @@ $(document).ready(function () {
     });
     $('#btn-english').click(function () {
         questions = questionsEN;
+        showQuestion(currentQuestion, true);
+    });
+    $('#btn-tamil').click(function () {
+        questions = questionsTA;
         showQuestion(currentQuestion, true);
     });
     $(".language-btn").click(function () {
