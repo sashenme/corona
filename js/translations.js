@@ -61,11 +61,7 @@ app.config(function ($translateProvider) {
     pleaseFollow:"Please follow the government's instructions.",
     stay14Days:"If you do develop any COVID-19 symptoms, you must self-isolate for 14 days",
     followGovertmentRules:"  Follow Government Regulations and Instructions Thoroughly, Avoid public places, and public transportation at all time, Wear a face mask, Wash your hands with soap every 30 minutes, wash your hands for at least 20 seconds, Avoid touching your face.",
-    callNow:"Call Now",
-   
-   
-   
-   
+    callNow:"Call Now",   
     rec1P4: "If you are experiencing other symptoms like Tiredness, Aches and Pains, Nasal Congestion, Runny Nose, Sore Throat, Diarrhoea and want assessment contact: <a href='tel:1999'>1999</a> or your district MOH Office immediately",
 
   });
