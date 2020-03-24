@@ -7,15 +7,16 @@
 //     { title: "Travel & Social History", subtile: "Have you returned to Sri Lanka from any country within the last 14 days?  Or Have you been in contact with a confirmed or suspected COVID19 patient during the last 14 days?", notsure: true, }
 // ];
 
-// var sinhalaQ = [ 
-//     { title: "ඔබ පහත සඳහන් සෞඛ්‍ය  තත්වයන්  වලින් එකක් හෝ අත්විඳිනවාද?", notsure: false, items: ["හුස්ම ගැනීමේ දැඩි අපහසුතාවයක් (කතා කිරීමට වත් නොහැකි අයුරෙන් )", "පපුවේ තද ගතියක් හෝ වේදනාවක්", "මානසික ව්‍යාකුලතාවයක්"] },
-//     { title: "Do you have fever?", subtile: "A fever is considered when your body temperature is above 98.6 F or 37 C", notsure: false },
-//     { title: "Do you have a dry cough?", notsure: false },
-//     { title: "Do you have any difficulty in breathing?", notsure: false },
-//     { title: "Do you have any of the following symptoms?", notsure: false, items: ["Tiredness", "Aches and Pains", "Nasal Congestion", "Runny Nose", "Sore Throat", "Diarrhoea"] },
-//     { title: "Travel & Social History", subtile: "Have you returned to Sri Lanka from any country within the last 14 days?  Or Have you been in contact with a confirmed or suspected COVID19 patient during the last 14 days?", notsure: true, }
-// ];
-var questions = [
+var questionsLK = [
+    { title: "ඔබ පහත සඳහන් සෞඛ්‍ය  තත්වයන්  වලින් එකක් හෝ අත්විඳිනවාද?", notsure: false, items: ["හුස්ම ගැනීමේ දැඩි අපහසුතාවයක් (කතා කිරීමට වත් නොහැකි අයුරෙන් )", "පපුවේ තද ගතියක් හෝ වේදනාවක්", "මානසික ව්‍යාකුලතාවයක්"] },
+    { title: " ඔබට උණ තත්වයක්  දැනට තිබේද?", subtile: "උණ තත්වයක් යනු ශරීර උෂ්ණත්වය සෙල්සියස් 37 හෝ ෆැරනයිට් 98.6 ට වැඩි විය යුතුය", notsure: false },
+    { title: "ඔබට වියලි කැස්සක් තිබේද?", notsure: false },
+    { title: "ඔබට හුස්ම ගැනීමේ අපහසුතාවයක් තිබේද?", notsure: false },
+    { title: "ඔබට පහත සඳහන් අමතර රෝග ලක්ෂණ තිබේද?", notsure: false, items: ["මහන්සි ගතිය", "ඇඟේ පතේ රිදීමක් ", "නාසයේ සිරවුම් ගතියක්", "හොටු දියර ගැලීම", "උගුරේ අමාරුව", "පාචනය"] },
+    { title: "සංචරණ හා සමාජ අන්තර්ක්‍රියා", subtile: " ඔබ පසුගිය දින 14 තුල ශ්‍රී ලංකාවෙන් පිටත සංචරණය යෙදුනාද ? හෝ ඔබ පසුගිය දින 14 තුල  කොරෝනා වෛරසය වැළඳුනු හෝ වැළඳුනු යැයි සැක සහිත පුද්ගලයෙකු ඇසුරක යෙදුනාද?", notsure: true, }
+];
+
+var questionsEN = [
     { title: "Are you experiencing any of the following conditions?", notsure: false, items: ["Severe difficulty breathing (e.g., Struggling for each breath, Speaking in single words)", "Severe chest pain", "Feeling confused or disoriented"] },
     { title: "Do you have fever?", subtile: "A fever is considered when your body temperature is above 98.6 F or 37 C", notsure: false },
     { title: "Do you have a dry cough?", notsure: false },
@@ -29,15 +30,16 @@ var questions = [
 var language = 'english';
 var gender = 0;
 var answers = [];
+var currentQuestion = 0;
 
 $(document).ready(function () {
-
+    questions = questionsEN;
     //Starting Screen
     $("#btn-notsure").hide();
     $("#q-list").hide()
     $("#q-subtitle").hide()
-    $(".recommendation").hide();
-    $(".questions").hide(); //
+    // $(".recommendation").hide();
+    // $(".questions").hide(); //
     $(".buttons").hide(); //
     $("#return").hide();
     $(".guide").hide();
@@ -57,8 +59,8 @@ $(document).ready(function () {
         $(".gender").hide();
         $(".questions").show(); //
         $(".buttons").show(); //
-        var q = 0;
-        showQuestion(q);
+        
+        showQuestion(currentQuestion);
 
 
         $(".icon-info").attr("src", "img/icon-" + gender + "-info.png");
@@ -68,24 +70,24 @@ $(document).ready(function () {
 
         $("#btn-yes").click(function () {
             saveAnswers(true);
-            q++;
-            showQuestion(q);
+            currentQuestion++;
+            showQuestion(currentQuestion);
         });
         $("#btn-notsure").click(function () {
             saveAnswers(true);
-            q++;
-            showQuestion(q);
+            currentQuestion++;
+            showQuestion(currentQuestion);
         });
         $("#btn-no").click(function () {
             saveAnswers(false);
-            q++;
-            showQuestion(q);
+            currentQuestion++;
+            showQuestion(currentQuestion);
 
         });
 
         $("#return").click(function () {
-            q--;
-            showQuestion(q);
+            currentQuestion--;
+            showQuestion(currentQuestion,true);
             answers.pop();
             $("#btn-notsure").hide();
         });
@@ -94,41 +96,51 @@ $(document).ready(function () {
 
 
 
-
-
+$('#btn-sinhala').click(function(){
+    questions = questionsLK;
+    showQuestion(currentQuestion, true);
+});
+$('#btn-english').click(function(){
+    questions = questionsEN;
+    showQuestion(currentQuestion, true);
+});
 
 });
 
 
-function showQuestion(q) {
-    if (q > 0) {
+function showQuestion(q, langRefresh) {
+    if (langRefresh == null)
+    langRefresh = false;
+
+    currentQuestion = q;
+    if (currentQuestion > 0) {
         $("#return").show();
     } else {
         $("#return").hide();
     }
-    if (q < questions.length) {
+    if (currentQuestion < questions.length) {
         console.log(gender);
-        $("#q-icon").attr("src", "img/icon-" + gender + q + ".png");
+        $("#q-icon").attr("src", "img/icon-" + gender + currentQuestion + ".png");
 
 
-        $("#q-title").html(questions[q].title);
-        if ('subtile' in questions[q]) {
+        $("#q-title").html(questions[currentQuestion].title);
+        if ('subtile' in questions[currentQuestion]) {
             $("#q-subtitle").show()
 
-            $("#q-subtitle").html(questions[q].subtile);
+            $("#q-subtitle").html(questions[currentQuestion].subtile);
         } else {
             $("#q-subtitle").hide()
 
         }
-        if ('items' in questions[q]) {
+        if ('items' in questions[currentQuestion]) {
             $("#q-list").show();
-            if (q == 4) {
+            if (currentQuestion == 4 || langRefresh) {
                 $("#q-list").html("");
             }
-            if ($("#q-list").is(':empty')) {
-                for (i = 0; i < questions[q].items.length; i++) {
+            if ($("#q-list").is(':empty') || langRefresh) {
+                for (i = 0; i < questions[currentQuestion].items.length; i++) {
 
-                    $("#q-list").append("<li>" + questions[q].items[i] + "</li>");
+                    $("#q-list").append("<li>" + questions[currentQuestion].items[i] + "</li>");
 
 
                 }
@@ -136,11 +148,11 @@ function showQuestion(q) {
         } else {
             $("#q-list").hide()
         }
-        if (questions[q].notsure) {
+        if (questions[currentQuestion].notsure) {
             $("#btn-notsure").show();
         }
     }
-
+    console.log(currentQuestion)
 }
 
 function saveAnswers(answer) {

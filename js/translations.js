@@ -10,31 +10,74 @@ app.config(function ($translateProvider) {
     yes: "Yes",
     no: "No",
     notsure: "Not Sure",
+    returnBack: "Return to previous question",
     guideTitle: "SELF-QUARANTINE GUIDE",
     guideH1: "Why am I being asked to self-isolate?",
-    guideP1: "Self-isolation can help prevent the spread of infections, such as novel coronavirus (2019-nCoV). When you are exposed to an illness, there is a time between the exposure and when you start to feel sick. This is known as the incubation period (usually 2 to 10 days for 2019-nCoV, and up to a maximum of 14 days). There is a very small chance that you can spread the germs during this time (the few days before a feeling of sickness starts). More importantly, staying home means that if you do start to feel sick, you won’t run the risk of this happening while you are in a public place. Self-isolation is a cautious action used to lower the chance that the virus could spread to others. It is important to remember that not everyone who is exposed will get sick, and anyone who feels well for the full 14 days after an exposure of concern is not considered to be infectious. ",
+    guideP1:
+      "Self-isolation can help prevent the spread of infections, such as novel coronavirus (2019-nCoV). When you are exposed to an illness, there is a time between the exposure and when you start to feel sick. This is known as the incubation period (usually 2 to 10 days for 2019-nCoV, and up to a maximum of 14 days). There is a very small chance that you can spread the germs during this time (the few days before a feeling of sickness starts). More importantly, staying home means that if you do start to feel sick, you won’t run the risk of this happening while you are in a public place. Self-isolation is a cautious action used to lower the chance that the virus could spread to others. It is important to remember that not everyone who is exposed will get sick, and anyone who feels well for the full 14 days after an exposure of concern is not considered to be infectious. ",
     guideH2: "What does self-isolation mean?",
-    guideP2: "Self-isolation means avoiding situations where you could infect other people. This means all situations where you may come in contact with others, such as social gatherings, work, school/university, child care, athletic events, faith-based gatherings, healthcare facilities, grocery stores, restaurants, shopping malls, and any public gatherings. You should, (where possible) not use public transportation including buses, taxis, or ride sharing. As much as possible, you should limit your contact with people and avoid having visitors to your home, but it is okay for friends, family or delivery drivers to drop off food or other things you may need. You can also use delivery or pick up services for errands such as grocery shopping. If you need to leave your home for an urgent errand, such as picking up essential medication, as a precaution to further reduce risk of spread, you can wear a surgical mask while you are out. ",
+    guideP2:
+      "Self-isolation means avoiding situations where you could infect other people. This means all situations where you may come in contact with others, such as social gatherings, work, school/university, child care, athletic events, faith-based gatherings, healthcare facilities, grocery stores, restaurants, shopping malls, and any public gatherings. You should, (where possible) not use public transportation including buses, taxis, or ride sharing. As much as possible, you should limit your contact with people and avoid having visitors to your home, but it is okay for friends, family or delivery drivers to drop off food or other things you may need. You can also use delivery or pick up services for errands such as grocery shopping. If you need to leave your home for an urgent errand, such as picking up essential medication, as a precaution to further reduce risk of spread, you can wear a surgical mask while you are out. ",
     guideH3: "What else can I do to stop the spread of infection?",
-    guideL1:"Consider allocating a separate room with adequate ventilation at home if possible and  household members should stay in another room or to be separated from the returnee.",
-    guideL2:"Maintain at least one meter distance from family members.",
-    guideL3:" Preferably, household members should use a separate bathroom. But, if sharing the same bathroom, cleaning of taps, doorknobs and utensils with soap and water or disinfectant after each use are very important.",
-    guideL4:"Need to minimize visitors to home and returnee should not face any visitors",
-    guideL5:"Frequent hand washing with soap and water for at least 20 seconds at a time and maintain alcohol based hand hygiene in instances where hand washing facilities are inadequate 6. Avoid touching eyes, nose and mouth with unwashed hands.",
-    guideL6:"Have adequate supplies for personal hygiene, food and drinks. Also have clear , undisrupted lines of communication.",
-    guideL7:"Home quarantined person is expected to monitor body temperature using a thermometer twice a day. If gets fever , cough, difficulty in breathing, sore throat, body aches and pain, including flue like symptoms, immediately inform 1999 ,  MOH / PHI of the area immediately",
-    guideL8:"The disposable facemasks and gloves after use should be properly discarded without reuse, preferably in a closed container",
-    guideL9:"Assign separate dishes, drinking glasses, cups, eating utensils, towels, bedding, and other items for the quarantined person",
-    guideL10:"Used utensils, bed linen and clothes should wash with soap and water",
+    guideL1:
+      "Consider allocating a separate room with adequate ventilation at home if possible and  household members should stay in another room or to be separated from the returnee.",
+    guideL2: "Maintain at least one meter distance from family members.",
+    guideL3:
+      " Preferably, household members should use a separate bathroom. But, if sharing the same bathroom, cleaning of taps, doorknobs and utensils with soap and water or disinfectant after each use are very important.",
+    guideL4:
+      "Need to minimize visitors to home and returnee should not face any visitors",
+    guideL5:
+      "Frequent hand washing with soap and water for at least 20 seconds at a time and maintain alcohol based hand hygiene in instances where hand washing facilities are inadequate 6. Avoid touching eyes, nose and mouth with unwashed hands.",
+    guideL6:
+      "Have adequate supplies for personal hygiene, food and drinks. Also have clear , undisrupted lines of communication.",
+    guideL7:
+      "Home quarantined person is expected to monitor body temperature using a thermometer twice a day. If gets fever , cough, difficulty in breathing, sore throat, body aches and pain, including flue like symptoms, immediately inform 1999 ,  MOH / PHI of the area immediately",
+    guideL8:
+      "The disposable facemasks and gloves after use should be properly discarded without reuse, preferably in a closed container",
+    guideL9:
+      "Assign separate dishes, drinking glasses, cups, eating utensils, towels, bedding, and other items for the quarantined person",
+    guideL10:
+      "Used utensils, bed linen and clothes should wash with soap and water",
+
+    notTestTitle: "You don’t need to be tested",
+    rec1P1: " Testing is currently focused on individuals who have traveled outside Sri Lanka or had contact with someone diagnosed as having COVID-19, or have developed symptoms of COVID-19.",
+    rec1P2: "However, there’s a chance you could get sick since you said you have been exposed",
+    dontVisitHospital:"Please do not visit a hospital, physician’s office, lab or healthcare facility without consulting <a href='tel:1999'>1999</a> or your district MOH office.",
+    dontGoPublic:"Don't go to any public places, stay at home, and don’t have any visitors.",
+    dontSharePersonal:"Don’t share personal items like dishes, cups, or towels and wash your hands often.",
+    ifYouDoDevelopFever:"If you do develop any Fever or Dry Cough or Difficulty in Breathing, take this self-assessment again or Call <a href='tel:1999'>1999</a> or your district MOH office immediately.",
+    IfSymptomsWorsen: "If your symptoms worsen, or if you are concerned, please call <a href='tel:1999'>1999</a> or your district MOH office immediately.",
+    startOver:"Start Over!",
+    rec2H1:"You will need to Self-Quarantine",
+    readGuide:"Read our easy Self - Quarantine Guide",
+    BecauseYouHaveSymtoms:"Because you have some symptoms, you need to self-quarantine.",
+    call1999:"Call 1999 Immediately",
+    rec3P1:"Avoid using public transportation to reach medical assistance, avoid close contact with anyone, Wear a face mask or cover your mouth and nose with some form of thick fabric, wash your hands with soap every 30 minutes or use alcohol based sanitizer until medical assistance gets to you. Read our self-quarantine guide.",
+    rec4h1: "But, you should Self-Quarantine because you have some symptoms",
+    rec4P1:"There are many common viruses other than COVID-19 that can cause your symptoms. Based on your responses you do not need to be tested for COVID-19 at this time",
+    rec4P2:"Testing is currently focused on individuals who have traveled outside Sri Lanka or had contact with someone diagnosed as having COVID-19, or have developed critical symptoms of COVID-19.",
+    pleaseFollow:"Please follow the government's instructions.",
+    stay14Days:"If you do develop any COVID-19 symptoms, you must self-isolate for 14 days",
+    followGovertmentRules:"  Follow Government Regulations and Instructions Thoroughly, Avoid public places, and public transportation at all time, Wear a face mask, Wash your hands with soap every 30 minutes, wash your hands for at least 20 seconds, Avoid touching your face.",
+    callNow:"Call Now",
+    test:"",
+   
+   
+   
+   
+    rec1P4: "If you are experiencing other symptoms like Tiredness, Aches and Pains, Nasal Congestion, Runny Nose, Sore Throat, Diarrhoea and want assessment contact: <a href='tel:1999'>1999</a> or your district MOH Office immediately",
+
   });
   $translateProvider.translations("lk", {
-    TITLE: "කොරෝනා වෛරසයෙන් ඔබේ සෞඛ්‍ය තත්වය පරීක්ෂා කර ගැනීමට පහත සඳහන් ප්‍රශ්න වලට පිළිතුරු සපයන්න",
+    TITLE:
+      "කොරෝනා වෛරසයෙන් ඔබේ සෞඛ්‍ය තත්වය පරීක්ෂා කර ගැනීමට පහත සඳහන් ප්‍රශ්න වලට පිළිතුරු සපයන්න",
     selectGender: "ස්ත්‍රී පුරුෂභාවය",
     male: "පුරුෂ",
     female: "ස්ත්‍රී",
     yes: "ඔව්",
     no: "නෑ",
-    notsure: "අවිනිශ්චිතයි"
+    notsure: "අවිනිශ්චිතයි",
+    returnBack: "කලින් ප්‍රශ්නයට යන්න",
   });
   $translateProvider.preferredLanguage("en");
 });
