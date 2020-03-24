@@ -49,6 +49,9 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0.15;
+  background-position: center center;
+  -webkit-animation: slide 20s infinite alternate;
+          animation: slide 20s infinite alternate;
 }
 
 .bg-solid {
@@ -148,6 +151,11 @@ body {
   margin: 20px 0;
 }
 
+.btn {
+  -webkit-transition: all ease-in 200ms;
+  transition: all ease-in 200ms;
+}
+
 .btn-primary {
   background-color: #0fa791;
   border-color: #0fa791;
@@ -177,6 +185,13 @@ body {
 
 .gender .icon {
   display: block;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.gender .icon:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .text-danger {
@@ -198,6 +213,12 @@ body {
 
 .recommendation .btn-danger {
   background-color: #c50102;
+  border-color: #c50102;
+}
+
+.recommendation .btn-danger:hover {
+  background-color: #ac0102;
+  color: #fff;
 }
 
 .recommendation .btn {
@@ -293,6 +314,56 @@ body {
   }
   #language .nav-link {
     font-size: 10px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background-color: #444b62;
+  opacity: 0.2;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0fa791;
+}
+
+@-webkit-keyframes shrink {
+  0% {
+    background-size: 125%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    background-size: 125%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 20%;
+  }
+}
+
+@keyframes slide {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 20%;
   }
 }
 /*# sourceMappingURL=main.css.map */
