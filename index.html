@@ -5,23 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DHSL - Self Corona Check</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+<body ng-app="at">
+    <nav class="ng-scope navbar navbar-expand-lg navbar-dark" ng-controller="Ctrl">
         <a class="navbar-brand" href="index.html">
             <img src="img/dhsl.svg" alt="ata" width="120">
         </a>
         <ul class="navbar-nav justify-content-center" id="language">
             <li class="nav-item active">
-                <a class="nav-link" href="#">English <span class="sr-only">(current)</span></a>
+                <a class="ng-scope nav-link" ng-click="changeLanguage('en')">English <span
+                        class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" id="btn-sinhala">සිංහල</a>
+                <a class="ng-scope nav-link" ng-click="changeLanguage('lk')"
+                    id="btn-sinhala">සිංහල</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">தமிழ்</a>
@@ -58,7 +60,8 @@
     <div class=" container-fluid main-container">
         <div class="row">
             <div class="col-lg-12">
-                <h5 class="text-center text-white">Answer these questions and check your health status for coronavirus.
+                <h5 translate="TITLE" class="ng-scope text-center text-white">Answer these questions and check your
+                    health status for coronavirus.
                 </h5>
             </div>
         </div>
@@ -241,7 +244,7 @@
     </div>
 
 
-    <script src="js/jquery.min.js" ></script>
+    <script src="js/jquery.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
@@ -250,6 +253,9 @@
         crossorigin="anonymous"></script> -->
 
     <script src="js/main.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-translate.min.js"></script>
+    <script src="js/translations.js"></script>
 </body>
 
 </html>
