@@ -1,6 +1,9 @@
 $primary-color: #0fa791;
 $secondary-color: #444b62;
 $danger-color: #c50102;
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Poppins";
   background: #eef0f6;

@@ -40,7 +40,7 @@ $(document).ready(function () {
     $(".questions").hide(); //
     $(".buttons").hide(); //
     $("#return").hide();
-
+    $(".guide").hide();
 
 
     $("#btn-male").click(function () {
@@ -158,18 +158,23 @@ function saveAnswers(answer) {
 
         if (answers[1] == true && checkSymtoms() == false && answers[5] == false) {
             showRecommendation("4");
+            $(".guide").show();
         } else if (answers[1] == false && checkSymtoms() == true && answers[5] == false) {
             showRecommendation("4");
+            $(".guide").show();
         } else if (answers[1] == false && checkSymtoms() == false && answers[5] == true) {
             showRecommendation("1");
+            $(".guide").show();
         } else if (answers[1] == false && checkSymtoms() == true && answers[5] == true) {
             showRecommendation("3");
         } else if (answers[1] == true && checkSymtoms() == true && answers[5] == true) {
             showRecommendation("3");
         } else if (answers[1] == true && checkSymtoms() == true && answers[5] == false) {
             showRecommendation("2");
+            $(".guide").show();
         } else if (answers[1] == true && checkSymtoms() == false && answers[5] == true) {
             showRecommendation("2");
+            $(".guide").show();
         } else if (answers[1] == false && checkSymtoms() == false && answers[5] == false) {
             showRecommendation("5");
         }
@@ -183,7 +188,6 @@ function saveAnswers(answer) {
 
 function showRecommendation(key) {
     $("#rec-" + key).show();
-
 }
 
 function checkSymtoms() {
