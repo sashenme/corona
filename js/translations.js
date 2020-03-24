@@ -40,6 +40,7 @@ app.config(function ($translateProvider) {
       "Used utensils, bed linen and clothes should wash with soap and water",
 
     notTestTitle: "You don’t need to be tested",
+    rec1H1:"Since you don’t have any symptoms for COVID-19 you do not need to be tested. But, you should Self-Quarantine.",
     rec1P1: " Testing is currently focused on individuals who have traveled outside Sri Lanka or had contact with someone diagnosed as having COVID-19, or have developed symptoms of COVID-19.",
     rec1P2: "However, there’s a chance you could get sick since you said you have been exposed",
     dontVisitHospital:"Please do not visit a hospital, physician’s office, lab or healthcare facility without consulting <a href='tel:1999'>1999</a> or your district MOH office.",

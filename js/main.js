@@ -38,8 +38,8 @@ $(document).ready(function () {
     $("#btn-notsure").hide();
     $("#q-list").hide()
     $("#q-subtitle").hide()
-    // $(".recommendation").hide();
-    // $(".questions").hide(); //
+    $(".recommendation").hide();
+    $(".questions").hide(); //
     $(".buttons").hide(); //
     $("#return").hide();
     $(".guide").hide();
