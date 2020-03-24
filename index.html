@@ -22,8 +22,7 @@
                         class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="ng-scope nav-link" ng-click="changeLanguage('lk')"
-                    id="btn-sinhala">සිංහල</a>
+                <a class="ng-scope nav-link" ng-click="changeLanguage('lk')" id="btn-sinhala">සිංහල</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">தமிழ்</a>
@@ -67,17 +66,18 @@
         </div>
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
+             
                 <div class="card shadow gender">
-                    <h4 class="text-center mb-5"><strong>Select Gender</strong></h4>
+                    <h4 class="text-center mb-5" translate="selectGender"><strong>Select Gender</strong></h4>
                     <div class="row">
                         <div class="col-6">
                             <img src="img/icon-0-info.png" alt="" class="icon" id="btn-female">
-                            <p class="text-center">Female</p>
+                            <p class="text-center" translate="female">Female</p>
                         </div>
                         <div class="col-6">
 
                             <img src="img/icon-1-info.png" alt="" class="icon" id="btn-male">
-                            <p class="text-center">Male</p>
+                            <p class="text-center" translate="male">Male</p>
                         </div>
                     </div>
                 </div>
@@ -226,15 +226,40 @@
                     </p>
                     <a class="text-center btn-primary btn-lg btn" href="index.html">Start Over!</a>
                 </div>
+                <div class="card shadow guide">
+                    <h1 class="text-center mb-4" translate="guideTitle"></h1>
+                    <h2 translate="guideH1"></h2>
+                    <p class="text-justify" translate="guideP1">
+                       
+                    </p>
+                    <h2 translate="guideH2"></h2>
+                    <p class="text-justify" translate="guideP2">
+                        
 
+                    </p>
+                    <h2 translate="guideH3"></h2>
+                    <ol>
+                        <li translate="guideL1"></li>
+                        <li translate="guideL2"></li>
+                        <li translate="guideL3"></li>
+                        <li translate="guideL4"></li>
+                        <li translate="guideL5"></li>
+                        <li translate="guideL6"></li>
+                        <li translate="guideL7"></li>
+                        <li translate="guideL8"></li>
+                        <li translate="guideL9"></li>
+                        <li translate="guideL10"></li>
+                    </ol>
+
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="buttons text-center">
-                    <button id="btn-no" class="btn btn-secondary-primary btn-lg">No</button>
-                    <button id="btn-notsure" class="btn btn-secondary btn-lg">Not Sure</button>
-                    <button id="btn-yes" class="btn btn-primary btn-lg">Yes</button>
+                    <button id="btn-no" class="btn btn-secondary-primary btn-lg" translate="no">No</button>
+                    <button id="btn-notsure" class="btn btn-secondary btn-lg" translate="notsure">Not Sure</button>
+                    <button id="btn-yes" class="btn btn-primary btn-lg" translate="yes">Yes</button>
                     <br>
                     <button class="link btn mt-4" id="return">Return to previous question</button>
                 </div>

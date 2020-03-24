@@ -61,6 +61,23 @@ body {
   h2 {
     font-weight: 700;
     font-size: 25px;
+    margin: 25px 0;
+  }
+  ol {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    li {
+      counter-increment: my-awesome-counter;
+     
+    }
+    li:before {
+      content: counter(my-awesome-counter) ". ";
+      color: $primary-color;
+      font-size: 30px;
+      position: absolute;
+      margin-left: -35px;
+      font-weight: 600;
+    }
   }
 }
 .card {
@@ -79,11 +96,12 @@ body {
   ul {
     margin-top: 2rem;
   }
-  ul > li {
+  ul > li,
+  ol > li {
     color: $secondary-color;
     line-height: 1.5;
     font-size: 1.3rem;
-    margin: 15px 0;
+    margin: 20px 0;
   }
 }
 .btn-primary {
@@ -180,7 +198,8 @@ body {
       margin-top: 1rem;
     }
     p,
-    ul > li {
+    ul > li,
+    ol > li {
       font-size: 16px;
 
       line-height: 1.5;
