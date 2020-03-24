@@ -59,7 +59,7 @@ $(document).ready(function () {
         $(".gender").hide();
         $(".questions").show(); //
         $(".buttons").show(); //
-        
+
         showQuestion(currentQuestion);
 
 
@@ -87,7 +87,7 @@ $(document).ready(function () {
 
         $("#return").click(function () {
             currentQuestion--;
-            showQuestion(currentQuestion,true);
+            showQuestion(currentQuestion, true);
             answers.pop();
             $("#btn-notsure").hide();
         });
@@ -96,21 +96,25 @@ $(document).ready(function () {
 
 
 
-$('#btn-sinhala').click(function(){
-    questions = questionsLK;
-    showQuestion(currentQuestion, true);
-});
-$('#btn-english').click(function(){
-    questions = questionsEN;
-    showQuestion(currentQuestion, true);
-});
-
+    $('#btn-sinhala').click(function () {
+        console.log($(this).parents().parent());
+        questions = questionsLK;
+        showQuestion(currentQuestion, true);
+    });
+    $('#btn-english').click(function () {
+        questions = questionsEN;
+        showQuestion(currentQuestion, true);
+    });
+    $(".language-btn").click(function () {
+        $("#language .nav-item").removeClass("active");
+        $(this).parent().addClass("active");
+    });
 });
 
 
 function showQuestion(q, langRefresh) {
     if (langRefresh == null)
-    langRefresh = false;
+        langRefresh = false;
 
     currentQuestion = q;
     if (currentQuestion > 0) {

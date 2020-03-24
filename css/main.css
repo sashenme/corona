@@ -8,6 +8,10 @@ body {
   font-weight: 400;
 }
 
+.language-btn, .gender img {
+  cursor: pointer;
+}
+
 .navbar {
   z-index: 2;
 }
