@@ -1,15 +1,7 @@
-// var englishQ = [ 
-//     { title: "Are you experiencing any of the following conditions?", notsure: false, items: ["Severe difficulty breathing (e.g., Struggling for each breath, Speaking in single words)", "Severe chest pain", "Feeling confused or disoriented"] },
-//     { title: "Do you have fever?", subtile: "A fever is considered when your body temperature is above 98.6 F or 37 C", notsure: false },
-//     { title: "Do you have a dry cough?", notsure: false },
-//     { title: "Do you have any difficulty in breathing?", notsure: false },
-//     { title: "Do you have any of the following symptoms?", notsure: false, items: ["Tiredness", "Aches and Pains", "Nasal Congestion", "Runny Nose", "Sore Throat", "Diarrhoea"] },
-//     { title: "Travel & Social History", subtile: "Have you returned to Sri Lanka from any country within the last 14 days?  Or Have you been in contact with a confirmed or suspected COVID19 patient during the last 14 days?", notsure: true, }
-// ];
 
 var questionsLK = [
     { title: "ඔබ පහත සඳහන් සෞඛ්‍ය  තත්වයන්  වලින් එකක් හෝ අත්විඳිනවාද?", notsure: false, items: ["හුස්ම ගැනීමේ දැඩි අපහසුතාවයක් (කතා කිරීමට වත් නොහැකි අයුරෙන් )", "පපුවේ තද ගතියක් හෝ වේදනාවක්", "මානසික ව්‍යාකුලතාවයක්"] },
-    { title: " ඔබට උණ තත්වයක්  දැනට තිබේද?", subtile: "උණ තත්වයක් යනු ශරීර උෂ්ණත්වය සෙල්සියස් 37 හෝ ෆැරනයිට් 98.6 ට වැඩි විය යුතුය", notsure: false },
+    { title: " ඔබට උණ තත්වයක්  දැනට තිබේද?", subtile: "උණ තත්වයක් යනු ශරීර උෂ්ණත්වය සෙල්සියස් 37° හෝ ෆැරනයිට් 98.6° ට වැඩි විය යුතුය", notsure: false },
     { title: "ඔබට වියලි කැස්සක් තිබේද?", notsure: false },
     { title: "ඔබට හුස්ම ගැනීමේ අපහසුතාවයක් තිබේද?", notsure: false },
     { title: "ඔබට පහත සඳහන් අමතර රෝග ලක්ෂණ තිබේද?", notsure: false, items: ["මහන්සි ගතිය", "ඇඟේ පතේ රිදීමක් ", "නාසයේ සිරවුම් ගතියක්", "හොටු දියර ගැලීම", "උගුරේ අමාරුව", "පාචනය"] },
@@ -18,7 +10,7 @@ var questionsLK = [
 
 var questionsEN = [
     { title: "Are you experiencing any of the following conditions?", notsure: false, items: ["Severe difficulty breathing (e.g., Struggling for each breath, Speaking in single words)", "Severe chest pain", "Feeling confused or disoriented"] },
-    { title: "Do you have fever?", subtile: "A fever is considered when your body temperature is above 98.6 F or 37 C", notsure: false },
+    { title: "Do you have fever?", subtile: "A fever is considered when your body temperature is above 98.6° F or 37° C", notsure: false },
     { title: "Do you have a dry cough?", notsure: false },
     { title: "Do you have any difficulty in breathing?", notsure: false },
     { title: "Do you have any of the following symptoms?", notsure: false, items: ["Tiredness", "Aches and Pains", "Nasal Congestion", "Runny Nose", "Sore Throat", "Diarrhoea"] },

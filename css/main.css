@@ -45,7 +45,7 @@ body {
 
 #language {
   position: absolute;
-  right: 0;
+  right: 15px;
 }
 
 #language .nav-link {
@@ -60,7 +60,9 @@ body {
 }
 
 .main-container {
+  margin: 0 auto;
   margin-top: 1rem;
+  max-width: 1890px;
 }
 
 .main-container h1 {
