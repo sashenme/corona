@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/jquery-ui-git.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -428,17 +429,113 @@
                     <button class="link btn mt-4" id="return" translate="returnBack">Return to previous
                         question</button>
                 </div>
-                <p class="text-center small text-secondary">Made with <span style="color: #e25555;">&hearts;</span> by
-                    <a href="https://github.com/SashenMe" target="_blank">@SashenMe</a></p>
+                <p class="text-center small text-secondary">
+                    Made with <span style="color: #e25555;">&hearts;</span> in Sri Lanka<br>
+                    <button class="btn btn-sm btn-secondary text-center mt-2 small" data-toggle="modal" data-target="#moreInfo">More
+                        Info</button>
+                </p>
+
             </div>
         </div>
     </div>
 
 
+
+    <div class="modal fade" id="moreInfo" tabindex="-1" role="dialog" aria-labelledby="moreInfoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="moreInfoLabel">More Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-justify">
+                        This trilingual online COVID19 self-assessment tool was made by the volunteers at Digital
+                        Humanitarians Sri Lanka under the guidance & supervision of Sri Lankan Medical Professionals and
+                        Medical Undergraduates.
+                    </p>
+                    <h6>Humans Behind This Project
+                    </h6>
+                    <ul>
+
+                       <li>Iroshan Kulatunga</li> 
+                       <li>Sashen Pasindu <small>( Engineering and UX/UI Development )</small></li> 
+                       <li>Kavinga Yapa Abeywardena</li> 
+                       <li>Dilara Abeygunaratne</li> 
+                       <li>Dr. Ridma Wijesundara</li> 
+                       <li>Vositha Wijenayake</li> 
+                       <li>Thadshajiny Kandasamy</li> 
+                       <li>Miyuru Samarasinghe</li> 
+                       <li>Praba Ponnambalam</li> 
+                       <li>Thambaru Wijesekara</li> 
+
+                      
+
+                    </ul>
+                    <h6>Our Technology Stack</h6>
+                    <ul>
+                        <li><a href="https://angularjs.org">AngularJS</a></li>
+                        <li><a href="https://jquery.com">jQuery</a></li>
+                        <li><a href="https://angular-translate.github.io/">Angular Translate</a></li>
+                        <li><a href="https://getbootstrap.com">Bootstrap</a></li>
+                        <li><a href="https://freepik.com">Freepik</a></li>
+                        <li><a href="https://fontawesome.com/">FontAwesome</a></li>
+                    </ul>
+
+                    <p>Share This Website, Let’s Join Hands to Stop The Community Spread.</p>
+                    <ul class="list-inline  social">
+                        <li class="list-inline-item">
+                            <a href="https://api.whatsapp.com/send?phone=&text=https://covidselfcheck.com">
+                                <span class="fa-stack ">
+                                    <i class="fas fa-circle fa-stack-2x whatsapp"></i>
+                                    <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcovidselfcheck.com">
+                                <span class="fa-stack ">
+                                    <i class="fas fa-circle fa-stack-2x facebook"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/intent/tweet/?text=&url=https%3A%2F%2Fcovidselfcheck.com">
+                                <span class="fa-stack ">
+                                    <i class="fas fa-circle fa-stack-2x twitter"></i>
+                                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li class="list-inline-item">
+                            <a href="mailto:?subject=&body=https%3A%2F%2Fcovidselfcheck.com">
+                                <span class="fa-stack ">
+                                    <i class="fas fa-circle fa-stack-2x email"></i>
+                                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/jquery.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script type="text/javascript"
         src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/angular-translate.min.js"></script>

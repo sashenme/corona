@@ -373,9 +373,51 @@ span.ui-slider-handle.ui-state-default.ui-corner-all:after {
   left: 18px;
 }
 
-/* Visit the origianal pen of ederlyn at https://codepen.io/ederlyn/pen/VaVBqW 
+.modal-content {
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #444b62;
+}
 
-This is just a modified fork version of it. */
+.modal-content .modal-header {
+  border-bottom: none;
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+
+.modal-content p, .modal-content ul > li {
+  font-size: 14px;
+}
+
+.modal-content h6, .modal-content h5 {
+  color: #21242e;
+  font-weight: 600;
+}
+
+.modal-content ul > li {
+  margin: 3px 0;
+}
+
+.btn-sm {
+  font-size: 12px;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.twitter {
+  color: #00acee;
+}
+
+.whatsapp {
+  color: #075E54;
+}
+
+.email {
+  color: #444b62;
+}
+
 @media (max-width: 768px) {
   #language {
     -webkit-box-orient: horizontal;

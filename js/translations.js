@@ -166,7 +166,7 @@ app.config(function ($translateProvider) {
     yearsEng:"வயதான",
     yearsSiTa:"",
     howOld:"உங்கள் வயது என்ன?",
-    ok:"",
+    ok:"சரி",
   });
   $translateProvider.preferredLanguage("en");
 });

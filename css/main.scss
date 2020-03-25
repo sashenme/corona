@@ -333,10 +333,43 @@ span.ui-slider-handle.ui-state-default.ui-corner-all:after {
   left: 18px;
 }
 
-/* Visit the origianal pen of ederlyn at https://codepen.io/ederlyn/pen/VaVBqW 
+.modal-content{
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: $secondary-color;
+  .modal-header{
+    border-bottom: none;
+    padding-top: 15px;
+    padding-bottom: 0;
+  }
+  p, ul>li{
+    font-size: 14px;
+  }
+  h6,h5{
+    color: #21242e;
+    font-weight: 600;
+  }
+  ul>li{
+    margin: 3px 0;
+  }
+}
 
-This is just a modified fork version of it. */
+.btn-sm{
+  font-size: 12px;
+}
 
+.facebook{
+  color: #3b5998 ;
+}
+.twitter{
+  color: #00acee ;
+}
+.whatsapp{
+  color: #075E54;
+}
+.email{
+  color: $secondary-color;
+}
 @media (max-width: 768px) {
   #language {
     flex-direction: row;
