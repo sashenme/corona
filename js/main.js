@@ -100,7 +100,9 @@ var currentQuestion = 0;
 
 $(window).load(function() {
     // Animate loader off screen
-    $(".loading").fadeOut("slow");;
+    $(".lds-ellipsis").fadeOut("slow");
+    $(".language-check").fadeIn("slow");
+  
 });
 
 
@@ -169,22 +171,25 @@ $(document).ready(function () {
 
 
 
-    $('#btn-sinhala').click(function () {
+    $('.btn-sinhala').click(function () {
         console.log($(this).parents().parent());
         questions = questionsLK;
         showQuestion(currentQuestion, true);
     });
-    $('#btn-english').click(function () {
+    $('.btn-english').click(function () {
         questions = questionsEN;
         showQuestion(currentQuestion, true);
     });
-    $('#btn-tamil').click(function () {
+    $('.btn-tamil').click(function () {
         questions = questionsTA;
         showQuestion(currentQuestion, true);
     });
     $(".language-btn").click(function () {
         $("#language .nav-item").removeClass("active");
         $(this).parent().addClass("active");
+        dataLang = $(this).attr('data-lang');
+        $("#"+dataLang).parent().addClass("active");
+        $(".loading").fadeOut();
     });
 });
 
@@ -268,7 +273,7 @@ function saveAnswers(answer) {
         } else if (answers[1] == true && checkSymtoms() == false && answers[5] == true) {
             showRecommendation("2");
             $(".guide").show();
-        } else if (answers[1] == false && checkSymtoms() == false && answers[5] == false) {
+        } else if (!answers[1]  && !checkSymtoms()  && !answers[5] ) {
             showRecommendation("5");
         }
 

@@ -3,27 +3,28 @@ $secondary-color: #444b62;
 $danger-color: #c50102;
 
 @font-face {
-  font-family: 'NotoSans'; /* Define the custom font name */
-  src:  url('../fonts/NotoSansSinhala-Regular.ttf');
-  unicode-range: U+0D80—0DFF; /* Define the available characters */
+  font-family: "NotoSans"; /* Define the custom font name */
+  src: url("../fonts/NotoSansSinhala-Regular.ttf");
+  unicode-range: U+0D80 —0DFF; /* Define the available characters */
   font-weight: 400;
 }
 @font-face {
-  font-family: 'NotoSans'; /* Define the custom font name */
-  src:  url('../fonts/NotoSansSinhala-ExtraBold.ttf');
-  unicode-range: U+0D80—0DFF; /* Define the available characters */
+  font-family: "NotoSans"; /* Define the custom font name */
+  src: url("../fonts/NotoSansSinhala-ExtraBold.ttf");
+  unicode-range: U+0D80 —0DFF; /* Define the available characters */
   font-weight: 600;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Poppins",NotoSans;
+  font-family: "Poppins", NotoSans;
   background: #eef0f6;
   font-weight: 400;
 }
-.language-btn, .gender img{
+.language-btn,
+.gender img {
   cursor: pointer;
 }
 .navbar {
@@ -60,7 +61,7 @@ body {
 
 #language {
   position: absolute;
-  right: 15px; 
+  right: 15px;
 
   .nav-link {
     border-radius: 60px;
@@ -77,10 +78,10 @@ body {
   margin: 0 auto;
   margin-top: 1rem;
   max-width: 1890px;
-  a{
-   text-decoration: none !important; 
+  a {
+    text-decoration: none !important;
   }
-  a:hover{
+  a:hover {
     color: darken($color: $primary-color, $amount: 20%);
   }
   h1 {
@@ -98,7 +99,6 @@ body {
     counter-reset: my-awesome-counter;
     li {
       counter-increment: my-awesome-counter;
-     
     }
     li:before {
       content: counter(my-awesome-counter) ". ";
@@ -134,7 +134,7 @@ body {
     margin: 20px 0;
   }
 }
-.btn{
+.btn {
   transition: all ease-in 200ms;
 }
 .btn-primary {
@@ -166,7 +166,7 @@ body {
     display: block;
     transition: all ease-in-out 300ms;
   }
-  .icon:hover{
+  .icon:hover {
     transform: translateY(-10px);
   }
 }
@@ -190,9 +190,9 @@ body {
     border-color: $danger-color;
   }
 
-  .btn-danger:hover{
+  .btn-danger:hover {
     background-color: darken($color: $danger-color, $amount: 5%);
-    color:#fff;
+    color: #fff;
   }
   .btn {
     margin: 15px auto;
@@ -221,6 +221,37 @@ body {
   h1 {
     color: $primary-color !important;
   }
+}
+
+.language-check {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  color: #fff;
+  font-size: 27px;
+  ul {
+    padding-left: 0;
+  }
+  ul > li {
+    list-style: none;
+    padding-left: 0;
+    padding: 30px 0;
+  }
+  .language-btn {
+    border: 1px solid;
+    padding: 10px 54px;
+    min-width: 245px;
+    display: block;
+    text-align: center;
+    border-radius: 38px;
+}
+  
 }
 
 @media (max-width: 768px) {
@@ -265,12 +296,13 @@ body {
     }
   }
 }
-@media(min-height:980px){
-  .card{
-    padding:55px 70px;
+
+@media (min-height: 980px) {
+  .card {
+    padding: 55px 70px;
   }
 }
-@media(max-width:320px){
+@media (max-width: 320px) {
   .gender {
     .icon {
       width: 120px;
@@ -278,40 +310,34 @@ body {
     }
   }
   .card {
-    padding:20px;
+    padding: 20px;
   }
   .bg-solid {
     // border-top-left-radius: 20% 15%;
     // border-top-right-radius: 20% 15%;
     top: 50vh;
   }
-  .bg-wrap{
+  .bg-wrap {
     height: 60vh;
   }
-  #language .nav-link{
+  #language .nav-link {
     font-size: 10px;
   }
-  
 }
 
-
-::-webkit-scrollbar-track
-{
-	// -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+::-webkit-scrollbar-track {
+  // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   background-color: $secondary-color;
   opacity: 0.2;
 }
 
-::-webkit-scrollbar
-{
-	width: 2px;
-	background-color: #F5F5F5;
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: #f5f5f5;
 }
 
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
   background-color: $primary-color;
-
 }
 @keyframes shrink {
   0% {

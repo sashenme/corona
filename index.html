@@ -16,7 +16,7 @@
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: #1ca093cf;
+    background: #1ca093ef;
         }
         .lds-ellipsis {
   display: inline-block;
@@ -85,6 +85,20 @@
 
 <body ng-app="at">
     <div class="loading">
+        <div class="language-check">
+            <ul class="ng-scope " ng-controller="Ctrl">
+                <li class="nav-item active">
+                    <a class="ng-scope language-btn btn-english" ng-click="changeLanguage('en')" id="" data-lang="btn-english">English <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="ng-scope language-btn btn-sinhala" ng-click="changeLanguage('lk')" id="" data-lang="btn-sinhala">සිංහල</a>
+                </li>
+                <li class="nav-item">
+                    <a class="ng-scope language-btn btn-tamil" ng-click="changeLanguage('ta')" id="" data-lang="btn-tamil">தமிழ்</a>
+                </li>
+            </ul>
+        </div>
         <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
     </div>
 
@@ -94,14 +108,14 @@
         </a>
         <ul class="navbar-nav justify-content-center" id="language">
             <li class="nav-item active">
-                <a class="ng-scope nav-link language-btn" ng-click="changeLanguage('en')" id="btn-english">English <span
+                <a class="ng-scope nav-link language-btn btn-english" ng-click="changeLanguage('en')" id="btn-english">English <span
                         class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="ng-scope nav-link language-btn" ng-click="changeLanguage('lk')" id="btn-sinhala">සිංහල</a>
+                <a class="ng-scope nav-link language-btn btn-sinhala" ng-click="changeLanguage('lk')" id="btn-sinhala">සිංහල</a>
             </li>
             <li class="nav-item">
-                <a class="ng-scope nav-link language-btn" ng-click="changeLanguage('ta')" id="btn-tamil">தமிழ்</a>
+                <a class="ng-scope nav-link language-btn btn-tamil" ng-click="changeLanguage('ta')" id="btn-tamil">தமிழ்</a>
             </li>
         </ul>
 
