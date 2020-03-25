@@ -6,79 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DHSL - Self Corona Check</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/jquery-ui-git.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <style>
         .loading {
             position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background: #1ca093ef;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: #1ca093ef;
         }
-        .lds-ellipsis {
-  display: inline-block;
-  position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-  width: 80px;
-  height: 80px;
-}
-.lds-ellipsis div {
-  position: absolute;
-  top: 33px;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: #fff;
-  animation-timing-function: cubic-bezier(0, 1, 1, 0);
-}
-.lds-ellipsis div:nth-child(1) {
-  left: 8px;
-  animation: lds-ellipsis1 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(2) {
-  left: 8px;
-  animation: lds-ellipsis2 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(3) {
-  left: 32px;
-  animation: lds-ellipsis2 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(4) {
-  left: 56px;
-  animation: lds-ellipsis3 0.6s infinite;
-}
-@keyframes lds-ellipsis1 {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes lds-ellipsis3 {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-@keyframes lds-ellipsis2 {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(24px, 0);
-  }
-}
 
+        .lds-ellipsis {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 80px;
+            height: 80px;
+        }
+
+        .lds-ellipsis div {
+            position: absolute;
+            top: 33px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #fff;
+            animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        }
+
+        .lds-ellipsis div:nth-child(1) {
+            left: 8px;
+            animation: lds-ellipsis1 0.6s infinite;
+        }
+
+        .lds-ellipsis div:nth-child(2) {
+            left: 8px;
+            animation: lds-ellipsis2 0.6s infinite;
+        }
+
+        .lds-ellipsis div:nth-child(3) {
+            left: 32px;
+            animation: lds-ellipsis2 0.6s infinite;
+        }
+
+        .lds-ellipsis div:nth-child(4) {
+            left: 56px;
+            animation: lds-ellipsis3 0.6s infinite;
+        }
+
+        @keyframes lds-ellipsis1 {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes lds-ellipsis3 {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(0);
+            }
+        }
+
+        @keyframes lds-ellipsis2 {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(24px, 0);
+            }
+        }
     </style>
 </head>
 
@@ -88,18 +100,25 @@
         <div class="language-check">
             <ul class="ng-scope " ng-controller="Ctrl">
                 <li class="nav-item active">
-                    <a class="ng-scope language-btn btn-english" ng-click="changeLanguage('en')" id="" data-lang="btn-english">English <span
-                            class="sr-only">(current)</span></a>
+                    <a class="ng-scope language-btn btn-english" ng-click="changeLanguage('en')" id=""
+                        data-lang="btn-english">English <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="ng-scope language-btn btn-sinhala" ng-click="changeLanguage('lk')" id="" data-lang="btn-sinhala">සිංහල</a>
+                    <a class="ng-scope language-btn btn-sinhala" ng-click="changeLanguage('lk')" id=""
+                        data-lang="btn-sinhala">සිංහල</a>
                 </li>
                 <li class="nav-item">
-                    <a class="ng-scope language-btn btn-tamil" ng-click="changeLanguage('ta')" id="" data-lang="btn-tamil">தமிழ்</a>
+                    <a class="ng-scope language-btn btn-tamil" ng-click="changeLanguage('ta')" id=""
+                        data-lang="btn-tamil">தமிழ்</a>
                 </li>
             </ul>
         </div>
-        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
 
     <nav class="ng-scope navbar navbar-expand-lg navbar-dark main-container" ng-controller="Ctrl">
@@ -108,14 +127,16 @@
         </a>
         <ul class="navbar-nav justify-content-center" id="language">
             <li class="nav-item active">
-                <a class="ng-scope nav-link language-btn btn-english" ng-click="changeLanguage('en')" id="btn-english">English <span
-                        class="sr-only">(current)</span></a>
+                <a class="ng-scope nav-link language-btn btn-english" ng-click="changeLanguage('en')"
+                    id="btn-english">English <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="ng-scope nav-link language-btn btn-sinhala" ng-click="changeLanguage('lk')" id="btn-sinhala">සිංහල</a>
+                <a class="ng-scope nav-link language-btn btn-sinhala" ng-click="changeLanguage('lk')"
+                    id="btn-sinhala">සිංහල</a>
             </li>
             <li class="nav-item">
-                <a class="ng-scope nav-link language-btn btn-tamil" ng-click="changeLanguage('ta')" id="btn-tamil">தமிழ்</a>
+                <a class="ng-scope nav-link language-btn btn-tamil" ng-click="changeLanguage('ta')"
+                    id="btn-tamil">தமிழ்</a>
             </li>
         </ul>
 
@@ -156,11 +177,26 @@
         </div>
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
+                <div class="card shadow age">
+                    <h1 class="text-center mb-3" translate="howOld"><strong>How old are you?</strong></h1>
+                    <h2 class="text-center"><span translate="yearsSiTa"></span> <span id="age">25</span> <span
+                            translate="yearsEng"></span></h2>
+                    <div class="row">
+                        <div class="slider-box">
 
-                <div class="card shadow gender">
+                            <input type="text" id="priceRange" readonly>
+                            <!-- <span>Years</span> -->
+                            <div id="price-range" class="slider"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="text-center btn-secondary btn-lg btn center-block" id="age-btn" translate="ok">Ok</button>
+                    </div>
+                </div>
+                <div class="card shadow gender hide-this">
                     <h4 class="text-center mb-5" translate="selectGender"><strong>Select Gender</strong></h4>
                     <div class="row">
-                       
+
                         <div class="col-6">
 
                             <img src="img/icon-1-info.png" alt="" class="icon btn-male" id="btn-male">
@@ -384,13 +420,9 @@
 
 
     <script src="js/jquery.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script> -->
-
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript"
+        src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/angular-translate.min.js"></script>

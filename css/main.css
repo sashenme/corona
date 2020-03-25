@@ -55,6 +55,10 @@ body {
           animation: slide 20s infinite alternate;
 }
 
+.hide-this {
+  display: none;
+}
+
 .bg-solid {
   background: #eef0f6;
   width: 100%;
@@ -289,6 +293,89 @@ body {
   border-radius: 38px;
 }
 
+.age h2 {
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.age button {
+  margin: 0 auto;
+}
+
+.slider-box h4 {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.slider-box {
+  margin: 0 auto;
+}
+
+label,
+input {
+  border: none;
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  background: transparent;
+  /*   color: #fff; */
+  color: #333;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+input {
+  width: 100%;
+  height: 0;
+  opacity: 0;
+}
+
+.slider {
+  margin: 25px 0;
+  height: 14px;
+  border: 0;
+  /*   background: #66c5c8; */
+  background: #0fa791;
+  border-radius: 14px;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+  width: 34px;
+  height: 34px;
+  left: -17px;
+  top: -10px;
+  border-radius: 34px;
+  background: #fff !important;
+  cursor: default;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  cursor: col-resize;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+  background: #e1e5e9;
+  border-radius: 14px;
+}
+
+span.ui-slider-handle.ui-state-default.ui-corner-all:before,
+span.ui-slider-handle.ui-state-default.ui-corner-all:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 12px;
+  width: 1px;
+  background: #e8e7e6;
+  left: 15px;
+  top: 11px;
+}
+
+span.ui-slider-handle.ui-state-default.ui-corner-all:after {
+  left: 18px;
+}
+
+/* Visit the origianal pen of ederlyn at https://codepen.io/ederlyn/pen/VaVBqW 
+
+This is just a modified fork version of it. */
 @media (max-width: 768px) {
   #language {
     -webkit-box-orient: horizontal;
@@ -328,11 +415,17 @@ body {
   .guide h1 {
     font-size: 32px;
   }
+  .age h2 {
+    font-size: 35px;
+  }
 }
 
 @media (min-height: 980px) {
   .card {
     padding: 55px 70px;
+  }
+  .slider-box {
+    width: 100%;
   }
 }
 
@@ -352,6 +445,9 @@ body {
   }
   #language .nav-link {
     font-size: 10px;
+  }
+  .slider-box {
+    margin: 0 20px;
   }
 }
 

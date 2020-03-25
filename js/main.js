@@ -105,7 +105,20 @@ $(window).load(function() {
   
 });
 
-
+$(function() {
+    $("#price-range").slider({
+      range: "max",
+      min: 1, // Change this to change the min value
+      max: 100, // Change this to change the max value
+      value: 25, // Change this to change the display value
+      step: 1, // Change this to change the increment by value.
+      slide: function(event, ui) {
+        $("#priceRange").val(ui.value + " ");
+        $("#age").html(ui.value)
+      }
+    });
+    $("#priceRange").val( $("#price-range").slider("value") + "");
+  });
 
 $(document).ready(function () {
     questions = questionsEN;
@@ -119,6 +132,12 @@ $(document).ready(function () {
     $("#return").hide();
     $(".guide").hide();
 
+    $("#age-btn").click(function(){
+        $(".gender").show();
+        $('.age').hide();
+       age =  $("#priceRange").val();
+       alert(age);
+    });
 
     $(".btn-male").click(function () {
         startQuestionare(1);
