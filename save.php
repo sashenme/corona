@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "corona";
+$username = "coronavi_sashen";
+$password = "Sashen93";
+$dbname = "coronavi_corona";
 
 $language = $_POST['txt-language'];
 $gender = $_POST['txt-gender'];
