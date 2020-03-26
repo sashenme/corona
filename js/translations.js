@@ -2,7 +2,7 @@ var app = angular.module("at", ["pascalprecht.translate"]);
 
 app.config(function ($translateProvider) {
   $translateProvider.translations("en", {
-    TITLE: "Answer these questions and check your health status for coronavirus.",
+    TITLE: "Use this self-assessment tool to help determine whether you need be tested for COVID-19.",
     selectGender: "Select Gender",
     male: "Male",
     female: "Female",
@@ -57,7 +57,7 @@ app.config(function ($translateProvider) {
     ok:"Okay!",
   });
   $translateProvider.translations("lk", {
-    TITLE: "කොරෝනා වෛරසයෙන් ඔබේ සෞඛ්‍ය තත්වය පරීක්ෂා කර ගැනීමට පහත සඳහන් ප්‍රශ්න වලට පිළිතුරු සපයන්න",
+    TITLE: "COVID-19 සඳහා ඔබව පරීක්ෂා කළ යුතුද යන්න තීරණය කිරීමට මෙම ස්වයං තක්සේරු මෙවලම භාවිතා කරන්න",
     selectGender: "ස්ත්‍රී පුරුෂභාවය",
     male: "පුරුෂ",
     female: "ස්ත්‍රී",
@@ -105,7 +105,7 @@ app.config(function ($translateProvider) {
     stay14Days: "ඔබට කොවිඩ්-19 රෝග ලක්ෂණ මඳ අයුරින් හෝ ඇති වුවහොත් හෝ ඇති වීමට ඇති අවධානමක් ඇති නම් දින 14 ක් ස්වයං නිරෝධායනය වීම අනිවාර්ය වේ",
     followGovertmentRules: "ඔබගේ පිඟාන , කෝප්පය , තුවා වැනි පුද්ගලික ද්‍රව්‍ය වෙන්කර  තබන්න , සෑම විනාඩි 30 කට සැරයක් හෝ යම්කිසි කාර්යක් කිරීමට පෙර හෝ කිරීමෙන් අනතුරුව ඔබගේ අත් හොඳින් සබන් ගා අඩුම තප්පර 20ක් සෝදන්න, නැතිනම් මද්‍යසාර සහිත විෂබීජ නාශකයක් ආධාරයෙන් අත්වල ඇති විෂබීජ විනාශ කරන්න.",
     callNow: "දැන්ම අමතන්න",
-     rec1P4:"ඔබට කැස්ස, උණ, හුස්ම ගැනීමේ අපහසුතාවයක්, මහන්සි ගතිය, ඇඟේ පතේ රිදීමක්, නාසයේ සිරවුම් ගතියක්, හොටු දියර ගැලීම, උගුරේ අමාරුව, පාචනය වැනි තත්වයක් ඇති  වුවහොත් මෙම ස්වයං පරීක්ෂාව නැවත කර අදාල නිර්දේශ අනුගමනය කරන්න. රෝග ලක්ෂණ බරපතල  මට්ටමක තිබේ නම් කරුණාකර <a href='tel:1999'>1999</a> සුව සැරිය ඒකකය අමතන්න.",
+     rec1P4:"රෝග ලක්ෂණ බරපතල  මට්ටමක තිබේ නම් කරුණාකර <a href='tel:1999'>1999</a> සුව සැරිය ඒකකය අමතන්න.",
      yearsEng:"යි",
      yearsSiTa:"අවුරුදු",
      howOld:"ඔබගේ වයස කීයද?",
@@ -114,7 +114,7 @@ app.config(function ($translateProvider) {
   // Tamil translation
   // Source: https://drive.google.com/file/d/1MmGLE6QF6mWfIKBjV6dO56u0N-Y-UOuv/view?ts=5e7a40cd
   $translateProvider.translations("ta", {
-    TITLE: "பின்வரும் கேள்விகளுக்கு பதிலளிப்பதின் மூலம் கொரோனாவிற்கான உங்களது உடல் நலத்தினை பரிசீலித்துக் கொள்ள முடியும்.",
+    TITLE: "COVID-19 க்கு நீங்கள் சோதிக்கப்பட வேண்டுமா என்பதை தீர்மானிக்க இந்த சுய மதிப்பீட்டு கருவியைப் பயன்படுத்தவும்.",
     selectGender: "பாலினை தெரிவு செய்க‌",
     male: "ஆண்",
     female: "பெண்",

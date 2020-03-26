@@ -16,6 +16,7 @@ $q5 = $_POST['txt-q5'];
 $q6 = $_POST['txt-q6'];
 $q7 = $_POST['txt-q7'];
 $q8 = $_POST['txt-q8'];
+$recommendation = $_POST['txt-recommendation'];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -24,8 +25,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO corona (lang, gender, age, critical, q1, q2, q3, q4, q5, q6, q7, q8)
-VALUES ('$language', '$gender','$age','$q0','$q1','$q2','$q3','$q4','$q5','$q6','$q7','$q8')";
+$sql = "INSERT INTO corona (lang, gender, age, critical, q1, q2, q3, q4, q5, q6, q7, q8,recommendation)
+VALUES ('$language', '$gender','$age','$q0','$q1','$q2','$q3','$q4','$q5','$q6','$q7','$q8','$recommendation')";
 
 if ($conn->query($sql) === TRUE) {
     // echo '<meta http-equiv="refresh" content="0;url=index.php?subscribed=1" />';

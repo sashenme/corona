@@ -248,10 +248,11 @@ $(document).ready(function () {
             method: "POST",
             data: $('#insert_form').serialize(),
             beforeSend: function () {
-                $('#insert').val("Inserting");
+               console.log("data added");
+
             },
             success: function (data) {
-                $('#insert_form')[0].reset();
+                // $('#insert_form')[0].reset();
                 console.log(data);
 
             }
@@ -316,8 +317,8 @@ function saveAnswers(answer) {
     if (answers[0]) {
         $(".buttons").hide();
         $(".questions").hide();
-        showRecommendation("3");
         $("#txt-q0").val('1');
+        showRecommendation("3");
     }
     if (answers.length == 8) {
         $(".buttons").hide();
@@ -432,6 +433,7 @@ function saveAnswers(answer) {
 
 function showRecommendation(key) {
     $("#rec-" + key).show();
+    $("#txt-recommendation").val(key);
     $("#submit-btn").trigger('click');
 
 }
