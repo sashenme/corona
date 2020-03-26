@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/jquery-ui-git.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -117,15 +118,15 @@
             <ul class="ng-scope " ng-controller="Ctrl">
                 <li class="nav-item active">
                     <a class="ng-scope language-btn btn-english" ng-click="changeLanguage('en')" id=""
-                        data-lang="btn-english">English <span class="sr-only">(current)</span></a>
+                        data-lang="btn-english" data-language="en">English <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="ng-scope language-btn btn-sinhala" ng-click="changeLanguage('lk')" id=""
-                        data-lang="btn-sinhala">සිංහල</a>
+                        data-lang="btn-sinhala" data-language="si">සිංහල</a>
                 </li>
                 <li class="nav-item">
                     <a class="ng-scope language-btn btn-tamil" ng-click="changeLanguage('ta')" id=""
-                        data-lang="btn-tamil">தமிழ்</a>
+                        data-lang="btn-tamil" data-language="ta">தமிழ்</a>
                 </li>
             </ul>
         </div>
@@ -143,16 +144,16 @@
         </a>
         <ul class="navbar-nav justify-content-center" id="language">
             <li class="nav-item active">
-                <a class="ng-scope nav-link language-btn btn-english" ng-click="changeLanguage('en')"
-                    id="btn-english">English <span class="sr-only">(current)</span></a>
+                <a class="ng-scope nav-link language-btn btn-english" ng-click="changeLanguage('en')" id="btn-english"
+                    data-language="en">English <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="ng-scope nav-link language-btn btn-sinhala" ng-click="changeLanguage('lk')"
-                    id="btn-sinhala">සිංහල</a>
+                <a class="ng-scope nav-link language-btn btn-sinhala" ng-click="changeLanguage('lk')" id="btn-sinhala"
+                    data-language="si">සිංහල</a>
             </li>
             <li class="nav-item">
-                <a class="ng-scope nav-link language-btn btn-tamil" ng-click="changeLanguage('ta')"
-                    id="btn-tamil">தமிழ்</a>
+                <a class="ng-scope nav-link language-btn btn-tamil" ng-click="changeLanguage('ta')" id="btn-tamil"
+                    data-language="ta">தமிழ்</a>
             </li>
         </ul>
 
@@ -189,6 +190,23 @@
                 <h5 translate="TITLE" class="ng-scope text-center text-white">Answer these questions and check your
                     health status for coronavirus.
                 </h5>
+                <div class="form-group">
+                    <form id="insert_form" method="POST">
+                        <input type="text" id="txt-language" name="txt-language">
+                        <input type="text" id="txt-gender" name="txt-gender">
+                        <input type="text" id="txt-age" name="txt-age">
+                        <input type="text" id="txt-q0" name="txt-q0">
+                        <input type="text" id="txt-q1" name="txt-q1">
+                        <input type="text" id="txt-q2" name="txt-q2">
+                        <input type="text" id="txt-q3" name="txt-q3">
+                        <input type="text" id="txt-q4" name="txt-q4">
+                        <input type="text" id="txt-q5" name="txt-q5">
+                        <input type="text" id="txt-q6" name="txt-q6">
+                        <input type="text" id="txt-q7" name="txt-q7">
+                        <input type="text" id="txt-q8" name="txt-q8">
+                        <button id="submit-btn"></button>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -431,7 +449,8 @@
                 </div>
                 <p class="text-center small text-secondary">
                     Made with <span style="color: #e25555;">&hearts;</span> in Sri Lanka<br>
-                    <button class="btn btn-sm btn-secondary text-center mt-2 small" data-toggle="modal" data-target="#moreInfo">More
+                    <button class="btn btn-sm btn-secondary text-center mt-2 small" data-toggle="modal"
+                        data-target="#moreInfo">More
                         Info</button>
                 </p>
 
@@ -461,18 +480,18 @@
                     </h6>
                     <ul>
 
-                       <li>Iroshan Kulatunga</li> 
-                       <li>Sashen Pasindu <small>( Engineering and UX/UI Development )</small></li> 
-                       <li>Kavinga Yapa Abeywardena</li> 
-                       <li>Dilara Abeygunaratne</li> 
-                       <li>Dr. Ridma Wijesundara</li> 
-                       <li>Vositha Wijenayake</li> 
-                       <li>Thadshajiny Kandasamy</li> 
-                       <li>Miyuru Samarasinghe</li> 
-                       <li>Praba Ponnambalam</li> 
-                       <li>Thambaru Wijesekara</li> 
+                        <li>Iroshan Kulatunga</li>
+                        <li>Sashen Pasindu <small>( Engineering and UX/UI Development )</small></li>
+                        <li>Kavinga Yapa Abeywardena</li>
+                        <li>Dilara Abeygunaratne</li>
+                        <li>Dr. Ridma Wijesundara</li>
+                        <li>Vositha Wijenayake</li>
+                        <li>Thadshajiny Kandasamy</li>
+                        <li>Miyuru Samarasinghe</li>
+                        <li>Praba Ponnambalam</li>
+                        <li>Thambaru Wijesekara</li>
 
-                      
+
 
                     </ul>
                     <h6>Our Technology Stack</h6>
@@ -511,7 +530,7 @@
                                 </span>
                             </a>
                         </li>
-                        
+
                         <li class="list-inline-item">
                             <a href="mailto:?subject=&body=https%3A%2F%2Fcovidselfcheck.com">
                                 <span class="fa-stack ">

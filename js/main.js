@@ -160,14 +160,17 @@ $(document).ready(function () {
         $(".gender").show();
         $('.age').hide();
         age = $("#priceRange").val();
-       
+        $("#txt-age").val(age);
+
     });
 
     $(".btn-male").click(function () {
         startQuestionare(1);
+        $("#txt-gender").val(1);
     });
     $(".btn-female").click(function () {
         startQuestionare(0);
+        $("#txt-gender").val(0);
     });
 
     function startQuestionare(getGender) {
@@ -233,6 +236,26 @@ $(document).ready(function () {
         dataLang = $(this).attr('data-lang');
         $("#" + dataLang).parent().addClass("active");
         $(".loading").fadeOut();
+
+        $("#txt-language").val($(this).attr('data-language'));
+    });
+
+
+    $('#insert_form').on("submit", function (event) {
+        event.preventDefault();
+        $.ajax({
+            url: "./save.php",
+            method: "POST",
+            data: $('#insert_form').serialize(),
+            beforeSend: function () {
+                $('#insert').val("Inserting");
+            },
+            success: function (data) {
+                $('#insert_form')[0].reset();
+                console.log(data);
+
+            }
+        });
     });
 });
 
@@ -279,7 +302,7 @@ function showQuestion(q, langRefresh) {
         }
         if (questions[currentQuestion].notsure) {
             $("#btn-notsure").show();
-        }else{
+        } else {
             $("#btn-notsure").hide();
         }
     }
@@ -294,12 +317,20 @@ function saveAnswers(answer) {
         $(".buttons").hide();
         $(".questions").hide();
         showRecommendation("3");
+        $("#txt-q0").val('1');
     }
     if (answers.length == 8) {
         $(".buttons").hide();
         $(".questions").hide();
 
-       
+
+        for (v = 0; v < 9; v++) {
+            if (answers[v]) {
+                $("#txt-q" + v).val('1');
+            } else {
+                $("#txt-q" + v).val('0');
+            }
+        }
 
         if (!answers[1] && !checkSymtoms() && !answers[4] && !answers[5] && !highRiskQ()) {
             showRecommendation("5");
@@ -307,89 +338,89 @@ function saveAnswers(answer) {
         } else if (!answers[1] && !checkSymtoms() && !answers[4] && !answers[5] && highRiskQ()) {
             showRecommendation("5");
             $(".guide").show();
-        }else if (!answers[1] && !checkSymtoms() && !answers[4] && answers[5] && !highRiskQ()) {
+        } else if (!answers[1] && !checkSymtoms() && !answers[4] && answers[5] && !highRiskQ()) {
             showRecommendation("1");
             $(".guide").show();
-        }else if (!answers[1] && !checkSymtoms() && !answers[4] && answers[5] && highRiskQ()) {
+        } else if (!answers[1] && !checkSymtoms() && !answers[4] && answers[5] && highRiskQ()) {
             showRecommendation("1");
             $(".guide").show();
-        }else if (!answers[1] && !checkSymtoms() && answers[4] && !answers[5] && !highRiskQ()) {
+        } else if (!answers[1] && !checkSymtoms() && answers[4] && !answers[5] && !highRiskQ()) {
             showRecommendation("4");
             $(".guide").show();
-        }else if (!answers[1] && !checkSymtoms() && answers[4] && !answers[5] && highRiskQ()) {
+        } else if (!answers[1] && !checkSymtoms() && answers[4] && !answers[5] && highRiskQ()) {
             showRecommendation("4");
             $(".guide").show();
-        }else if (!answers[1] && !checkSymtoms() && answers[4] && answers[5] && !highRiskQ()) {
+        } else if (!answers[1] && !checkSymtoms() && answers[4] && answers[5] && !highRiskQ()) {
             showRecommendation("1");
             $(".guide").show();
-        }else if (!answers[1] && !checkSymtoms() && answers[4] && answers[5] && highRiskQ()) {
+        } else if (!answers[1] && !checkSymtoms() && answers[4] && answers[5] && highRiskQ()) {
             showRecommendation("1");
             $(".guide").show();
-        }else if (!answers[1] && checkSymtoms() && !answers[4] && !answers[5] && !highRiskQ()) {
+        } else if (!answers[1] && checkSymtoms() && !answers[4] && !answers[5] && !highRiskQ()) {
             showRecommendation("4");
             $(".guide").show();
-        }else if (!answers[1] && checkSymtoms() && !answers[4] && !answers[5] && highRiskQ()) {
+        } else if (!answers[1] && checkSymtoms() && !answers[4] && !answers[5] && highRiskQ()) {
             showRecommendation("4");
             $(".guide").show();
-        }else if (!answers[1] && checkSymtoms() && !answers[4] && answers[5] && !highRiskQ()) {
+        } else if (!answers[1] && checkSymtoms() && !answers[4] && answers[5] && !highRiskQ()) {
             showRecommendation("2");
             $(".guide").show();
-        }else if (!answers[1] && checkSymtoms() && !answers[4] && answers[5] && highRiskQ()) {
+        } else if (!answers[1] && checkSymtoms() && !answers[4] && answers[5] && highRiskQ()) {
             showRecommendation("2");
             $(".guide").show();
-        }else if (!answers[1] && checkSymtoms() && answers[4] && !answers[5] && !highRiskQ()) {
+        } else if (!answers[1] && checkSymtoms() && answers[4] && !answers[5] && !highRiskQ()) {
             showRecommendation("2");
             $(".guide").show();
-        }else if (!answers[1] && checkSymtoms() && answers[4] && !answers[5] && highRiskQ()) {
+        } else if (!answers[1] && checkSymtoms() && answers[4] && !answers[5] && highRiskQ()) {
             showRecommendation("2");
             $(".guide").show();
-        }else if (!answers[1] && checkSymtoms() && answers[4] && answers[5] && !highRiskQ()) {
+        } else if (!answers[1] && checkSymtoms() && answers[4] && answers[5] && !highRiskQ()) {
             showRecommendation("3");
-        }else if (!answers[1] && checkSymtoms() && answers[4] && answers[5] && highRiskQ()) {
+        } else if (!answers[1] && checkSymtoms() && answers[4] && answers[5] && highRiskQ()) {
             showRecommendation("3");
-        }else if (answers[1] && !checkSymtoms() && !answers[4] && !answers[5] && !highRiskQ()) {
+        } else if (answers[1] && !checkSymtoms() && !answers[4] && !answers[5] && !highRiskQ()) {
             showRecommendation("4");
             $(".guide").show();
-        }else if (answers[1] && !checkSymtoms() && !answers[4] && !answers[5] && highRiskQ()) {
+        } else if (answers[1] && !checkSymtoms() && !answers[4] && !answers[5] && highRiskQ()) {
             showRecommendation("4");
             $(".guide").show();
-        }else if (answers[1] && !checkSymtoms() && !answers[4] && answers[5] && !highRiskQ()) {
+        } else if (answers[1] && !checkSymtoms() && !answers[4] && answers[5] && !highRiskQ()) {
             showRecommendation("2");
             $(".guide").show();
-        }else if (answers[1] && !checkSymtoms() && !answers[4] && answers[5] && highRiskQ()) {
+        } else if (answers[1] && !checkSymtoms() && !answers[4] && answers[5] && highRiskQ()) {
             showRecommendation("2");
             $(".guide").show();
-        }else if (answers[1] && !checkSymtoms() && answers[4] && !answers[5] && !highRiskQ()) {
+        } else if (answers[1] && !checkSymtoms() && answers[4] && !answers[5] && !highRiskQ()) {
             showRecommendation("4");
             $(".guide").show();
-        }else if (answers[1] && !checkSymtoms() && answers[4] && !answers[5] && highRiskQ()) {
+        } else if (answers[1] && !checkSymtoms() && answers[4] && !answers[5] && highRiskQ()) {
             showRecommendation("4");
             $(".guide").show();
-        }else if (answers[1] && !checkSymtoms() && answers[4] && answers[5] && !highRiskQ()) {
+        } else if (answers[1] && !checkSymtoms() && answers[4] && answers[5] && !highRiskQ()) {
             showRecommendation("2");
             $(".guide").show();
-        }else if (answers[1] && !checkSymtoms() && answers[4] && answers[5] && highRiskQ()) {
+        } else if (answers[1] && !checkSymtoms() && answers[4] && answers[5] && highRiskQ()) {
             showRecommendation("2");
             $(".guide").show();
-        }else if (answers[1] && checkSymtoms() && !answers[4] && !answers[5] && !highRiskQ()) {
+        } else if (answers[1] && checkSymtoms() && !answers[4] && !answers[5] && !highRiskQ()) {
             showRecommendation("4");
             $(".guide").show();
-        }else if (answers[1] && checkSymtoms() && !answers[4] && !answers[5] && highRiskQ()) {
+        } else if (answers[1] && checkSymtoms() && !answers[4] && !answers[5] && highRiskQ()) {
             showRecommendation("4");
             $(".guide").show();
-        }else if (answers[1] && checkSymtoms() && !answers[4] && answers[5] && !highRiskQ()) {
+        } else if (answers[1] && checkSymtoms() && !answers[4] && answers[5] && !highRiskQ()) {
             showRecommendation("3");
-        }else if (answers[1] && checkSymtoms() && !answers[4] && answers[5] && highRiskQ()) {
+        } else if (answers[1] && checkSymtoms() && !answers[4] && answers[5] && highRiskQ()) {
             showRecommendation("3");
-        }else if (answers[1] && checkSymtoms() && answers[4] && !answers[5] && !highRiskQ()) {
+        } else if (answers[1] && checkSymtoms() && answers[4] && !answers[5] && !highRiskQ()) {
             showRecommendation("2");
             $(".guide").show();
-        }else if (answers[1] && checkSymtoms() && answers[4] && !answers[5] && highRiskQ()) {
+        } else if (answers[1] && checkSymtoms() && answers[4] && !answers[5] && highRiskQ()) {
             showRecommendation("2");
             $(".guide").show();
-        }else if (answers[1] && checkSymtoms() && answers[4] && answers[5] && !highRiskQ()) {
+        } else if (answers[1] && checkSymtoms() && answers[4] && answers[5] && !highRiskQ()) {
             showRecommendation("3");
-        }else if (answers[1] && checkSymtoms() && answers[4] && answers[5] && highRiskQ()) {
+        } else if (answers[1] && checkSymtoms() && answers[4] && answers[5] && highRiskQ()) {
             showRecommendation("3");
         }
 
@@ -401,6 +432,8 @@ function saveAnswers(answer) {
 
 function showRecommendation(key) {
     $("#rec-" + key).show();
+    $("#submit-btn").trigger('click');
+
 }
 
 function checkSymtoms() {

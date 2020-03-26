@@ -271,9 +271,8 @@ body {
 
 .slider-box {
   margin: 0 auto;
-}
 
-label,
+  label,
 input {
   border: none;
   display: inline-block;
@@ -291,6 +290,9 @@ input {
   height: 0;
   opacity: 0;
 }
+}
+
+
 
 .slider {
   margin: 25px 0;
