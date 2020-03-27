@@ -422,6 +422,29 @@ span.ui-slider-handle.ui-state-default.ui-corner-all:after {
   font-size: 11px !important;
 }
 
+.risk-meter {
+  position: relative;
+}
+
+.risk-meter i {
+  position: absolute;
+  margin-left: -7px;
+  -webkit-transition: all ease-in-out 600ms;
+  transition: all ease-in-out 600ms;
+  margin-top: 4px;
+  font-size: 20px;
+  left: 0;
+}
+
+.risk-meter .risk-level {
+  width: 100%;
+  height: 40px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#0cf213), color-stop(20%, #9dd848), color-stop(46%, #ffde00), color-stop(70%, #ff9400), to(red));
+  background-image: linear-gradient(-90deg, #0cf213, #9dd848 20%, #ffde00 46%, #ff9400 70%, red);
+  position: relative;
+  margin-top: 30px;
+}
+
 @media (max-width: 768px) {
   #language {
     -webkit-box-orient: horizontal;
@@ -463,6 +486,9 @@ span.ui-slider-handle.ui-state-default.ui-corner-all:after {
   }
   .age h2 {
     font-size: 35px;
+  }
+  #descrimination p {
+    font-size: 70%;
   }
 }
 

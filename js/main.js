@@ -251,7 +251,7 @@ $(document).ready(function () {
             method: "POST",
             data: $('#insert_form').serialize(),
             beforeSend: function () {
-               console.log("data added");
+                console.log("data added");
 
             },
             success: function (data) {
@@ -433,11 +433,37 @@ function saveAnswers(answer) {
     }
     console.log(answers);
 }
-
+var riskLevel;
 function showRecommendation(key) {
     $("#rec-" + key).show();
     $("#txt-recommendation").val(key);
     $("#submit-btn").trigger('click');
+   
+    switch (key) {
+        case "1":
+            riskLevel = 70;
+            break;
+        case "2":
+            riskLevel = 30;
+            break;
+        case "3":
+            riskLevel = 0;
+            break;
+        case "4":
+            riskLevel = 60;
+            break;
+        case "5":
+            riskLevel = 100;
+            break;
+
+    }
+    // if(key == 3)
+    
+
+    setTimeout(() => {
+        console.log(riskLevel);
+        $("#rec-" + key + " i").css('left', riskLevel + '%');
+    }, 500);
 
 }
 
