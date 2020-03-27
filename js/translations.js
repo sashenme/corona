@@ -121,8 +121,8 @@ app.config(function ($translateProvider) {
     descriPara2: "සෞඛ්‍ය ප්‍රතිවිපාක සහ අවශ්‍ය පරිදි වෛද්‍ය උපදෙස් ලබා නොගැනීම නිසා ඇති වන හදිසි අවස්ථා සඳහා නිර්මාණකරුවන්  (ඩිජිටල් හියුමැනිටේරියන්ස් ශ්‍රී ලංකා) සියලු වගකීම් වලින් නිදහස් කිරීමට මම එකඟ වෙමි.    ",
     iAgree: "එකඟ වෙමි",
     descriTitle: "වියාචනය",
-    highRisk:"High Risk",
-    safe:"Safe",
+    highRisk:"ඉහළ අවදානමක්",
+    safe:"ආරක්ෂිතයි",
   });
   // Tamil translation
   // Source: https://drive.google.com/file/d/1MmGLE6QF6mWfIKBjV6dO56u0N-Y-UOuv/view?ts=5e7a40cd
@@ -184,8 +184,8 @@ app.config(function ($translateProvider) {
     descriPara2: "எந்தவொரு சுகாதார விளைவுகளுக்கும், தேவைக்கேற்ப மருத்துவ ஆலோசனையைப் பெறாததால் ஏற்படும் மருத்துவ அவசரநிலைகளுக்கும்   இவ் படைப்பாளர்கள்  ( Digital Humanitarians Sri Lanka ) எந்தவொரு பொறுப்பையும்  ஏற்கமாட்டார்கள் என்பதை  நான்  இங்கு ஒப்புக்கொள்கிறேன்.",
     iAgree: "நான் ஒப்புக்கொள்கிறேன்",
     descriTitle: "மறுப்பு",
-    highRisk:"High Risk",
-    safe:"Safe",
+    highRisk:"அதிக ஆபத்து",
+    safe:"பாதுகாப்பானது",
   });
   $translateProvider.preferredLanguage("en");
 });
