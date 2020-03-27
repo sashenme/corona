@@ -260,12 +260,13 @@
                     <ul id="q-list"></ul>
                 </div>
 
-              
+
                 <div class="card shadow recommendation" id="rec-1">
                     <div class="risk-meter mb-5">
                         <span translate="highRisk" class="float-left">High Risk</span>
                         <span translate="safe" class="float-right">Safe</span>
-                        <div class="risk-level "></div><div class="risk-mark"></div>
+                        <div class="risk-level "></div>
+                        <div class="risk-mark"></div>
                         <i class="fas fa-arrow-up"></i>
                     </div>
                     <img src="img/icon-0-info.png" alt="" class="icon icon-info">
@@ -306,7 +307,8 @@
                     <div class="risk-meter mb-5">
                         <span translate="highRisk" class="float-left">High Risk</span>
                         <span translate="safe" class="float-right">Safe</span>
-                        <div class="risk-level "></div><div class="risk-mark"></div>
+                        <div class="risk-level "></div>
+                        <div class="risk-mark"></div>
                         <i class="fas fa-arrow-up"></i>
                     </div>
                     <img src="img/icon-0-warning.png" alt="" class="icon icon-warning">
@@ -344,7 +346,8 @@
                     <div class="risk-meter mb-5">
                         <span translate="highRisk" class="float-left">High Risk</span>
                         <span translate="safe" class="float-right">Safe</span>
-                        <div class="risk-level "></div><div class="risk-mark"></div>
+                        <div class="risk-level "></div>
+                        <div class="risk-mark"></div>
                         <i class="fas fa-arrow-up"></i>
                     </div>
                     <img src="img/icon-0-danger.png" alt="" class="icon icon-danger">
@@ -365,7 +368,8 @@
                     <div class="risk-meter mb-5">
                         <span translate="highRisk" class="float-left">High Risk</span>
                         <span translate="safe" class="float-right">Safe</span>
-                        <div class="risk-level "></div><div class="risk-mark"></div>
+                        <div class="risk-level "></div>
+                        <div class="risk-mark"></div>
                         <i class="fas fa-arrow-up"></i>
                     </div>
                     <img src="img/icon-0-warning.png" alt="" class="icon icon-warning">
@@ -406,7 +410,8 @@
                     <div class="risk-meter mb-5">
                         <span translate="highRisk" class="float-left">High Risk</span>
                         <span translate="safe" class="float-right">Safe</span>
-                        <div class="risk-level "></div><div class="risk-mark"></div>
+                        <div class="risk-level "></div>
+                        <div class="risk-mark"></div>
                         <i class="fas fa-arrow-up"></i>
                     </div>
                     <img src="img/icon-0-info.png" alt="" class="icon icon-info">
@@ -489,11 +494,14 @@
                 </div>
                 <p class="text-center small text-secondary">
                     Made with <span style="color: #e25555;">&hearts;</span> in Sri Lanka<br>
-                    <a href="https://www.facebook.com/DigitalHumanitariansSL/" target="_blank">Digital Humanitarians Sri Lanka Crisis Response</a>
+                    <a href="https://www.facebook.com/DigitalHumanitariansSL/" target="_blank">Digital Humanitarians Sri
+                        Lanka Crisis Response</a>
                     <br>
                     <button class="btn btn-sm btn-secondary text-center mt-2 small" data-toggle="modal"
                         data-target="#moreInfo">More
                         Info</button>
+                    <button class="btn btn-sm btn-dark text-center mt-2 small" data-toggle="modal"
+                        data-target="#feedbackForm">Say Something</button>
                 </p>
                 <p></p>
             </div>
@@ -584,6 +592,33 @@
         </div>
     </div>
 
+    <div class="modal fade" id="feedbackForm" tabindex="-1" role="dialog" aria-labelledby="feedbackFormLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="feedbackFormLabel">Feedback Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" id="feedback_form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name" name="txt-name" id="txt-name" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="txt-comment" id="txt-comment" rows="5" class="form-control" required
+                            placeholder="Write your comment"></textarea>
+                    </div>
+                    <button class="btn btn-primary">Submit</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <div class="modal fade" id="descrimination" tabindex="-1" role="dialog" aria-labelledby="descriminationLabel"
         aria-hidden="true" data-backdrop="static" data-keyboard="false">
@@ -609,7 +644,8 @@
 
 
 
-                    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#descrimination" translate="iAgree">I
+                    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#descrimination"
+                        translate="iAgree">I
                         Agree</button>
                     <p class="text-justify agree-text" translate="descriPara2">
                         I agree that I exclude any liability on the part of the creators ( Digital Humanitarians Sri

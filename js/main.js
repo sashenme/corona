@@ -261,6 +261,26 @@ $(document).ready(function () {
             }
         });
     });
+
+    $('#feedback_form').on("submit", function (event) {
+        event.preventDefault();
+        $.ajax({
+            url: "./feedback.php",
+            method: "POST",
+            data: $('#feedback_form').serialize(),
+            beforeSend: function () {
+              
+
+            },
+            success: function (data) {
+                console.log(data);
+                $('#feedback_form')[0].reset();
+                $("#feedbackForm").modal("hide");
+                alert("Thanks for your feedback!");
+
+            }
+        });
+    });
 });
 
 
