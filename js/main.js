@@ -448,12 +448,16 @@ function showRecommendation(key) {
             break;
         case "3":
             riskLevel = 0;
+            $("#rec-3 .risk-mark").css("margin-left","-6px");
+            $("#rec-3 i").css("margin-left","0");
             break;
         case "4":
             riskLevel = 60;
             break;
         case "5":
             riskLevel = 100;
+            $("#rec-5 .risk-mark").css("margin-left","-24px");
+            $("#rec-5 i").css("margin-left","-17px");
             break;
 
     }
@@ -463,6 +467,7 @@ function showRecommendation(key) {
     setTimeout(() => {
         console.log(riskLevel);
         $("#rec-" + key + " i").css('left', riskLevel + '%');
+        $("#rec-" + key + " .risk-mark").css('left', riskLevel + '%');
     }, 500);
 
 }

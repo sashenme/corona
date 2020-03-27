@@ -394,6 +394,17 @@ span.ui-slider-handle.ui-state-default.ui-corner-all:after {
     position: relative;
     margin-top: 30px;
   }
+  .risk-mark{
+    position: absolute;
+    left: 0;
+    width: 30px;
+    border: 5px solid #fff;
+    height: 45px;
+    top: 27px;
+    margin-left: -13px;
+    box-shadow: 0 0 6px rgba(0,0,0,.2);
+    transition: all ease-in-out 600ms;
+  }
 }
 
 @media (max-width: 768px) {
