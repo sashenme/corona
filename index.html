@@ -7,9 +7,10 @@
     <title>COVID-19 Self Assessment Online - Digital Humanitarians Sri Lanka</title>
     <meta name="description"
         content="Use this self-assessment tool to help determine whether you need be tested for COVID-19.">
-    <meta property="og:image" content="https://covidselfcheck.com/img/og-image-facebook.jpg " />
-    <meta property="og:image:width" content="600" />
-    <meta property="og:image:height" content="315" />
+    <meta property="og:title" content="COVID-19 Self Assessment Tool Online" />
+    <meta property="og:description "
+        content="Use this self-assessment tool to help determine whether you need be tested for COVID-19" />
+    <meta property="og:image" content="https://covidselfcheck.com/img/og-image.jpg" />
     <meta name="twitter:image" content="https://covidselfcheck.com/img/og-image-twitter.jpg">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/jquery-ui-git.css">
@@ -546,6 +547,43 @@
                             </a>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="descrimination" tabindex="-1" role="dialog" aria-labelledby="descriminationLabel"
+        aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="descriminationLabel" translate="descriTitle">Disclaimer</h5>
+
+                </div>
+                <div class="modal-body">
+                    <p class="text-justify" translate="descriPara1">
+                        This online self assessment tool does not provide medical advice, It is intended for
+                        informational purposes only. It is not a substitute for professional medical advice, diagnosis
+                        or treatment. Never ignore professional medical advice in seeking treatment. If you think you
+                        may have a medical emergency, immediately call your district Medical Officer of Health or dial
+                        1999.
+                        <br>
+                        <br>
+                        Digital Humanitarians Sri Lanka ( The Creators of this tool ) exclude any liability for any
+                        medical situation due to not contacting a medical expert to check in a situation requiring
+                        medical assistance.
+                    </p>
+
+
+
+                    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#descrimination" translate="iAgree">I
+                        Agree</button>
+                    <p class="text-justify agree-text" translate="descriPara2">
+                        I agree that I exclude any liability on the part of the creators ( Digital Humanitarians Sri
+                        Lanka ) for any health consequences and medical emergencies suffered due to not seeking medical
+                        advice as needed.
+                    </p>
                 </div>
             </div>
         </div>

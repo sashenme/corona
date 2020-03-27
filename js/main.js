@@ -145,6 +145,9 @@ $(function () {
 });
 
 $(document).ready(function () {
+    $('#descrimination').modal('show');
+
+
     questions = questionsEN;
     //Starting Screen
     $("#btn-notsure").hide();

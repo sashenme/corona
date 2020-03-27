@@ -372,6 +372,10 @@ span.ui-slider-handle.ui-state-default.ui-corner-all:after {
 .email{
   color: $secondary-color;
 }
+
+.agree-text{
+  font-size: 11px !important;
+}
 @media (max-width: 768px) {
   #language {
     flex-direction: row;

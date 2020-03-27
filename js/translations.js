@@ -44,17 +44,23 @@ app.config(function ($translateProvider) {
     call1999: "Call 1999 Immediately",
     rec3P1: "Avoid using public transportation to reach medical assistance, avoid close contact with anyone, Wear a face mask or cover your mouth and nose with some form of thick fabric, wash your hands with soap every 30 minutes or use alcohol based sanitizer until medical assistance gets to you. Read our self-quarantine guide.",
     rec4h1: "But, you should Self-Quarantine because you have some symptoms",
-    rec4P1:"There are many common viruses other than COVID-19 that can cause your symptoms. Based on your responses you do not need to be tested for COVID-19 at this time",
-    rec4P2:"Testing is currently focused on individuals who have traveled outside Sri Lanka or had contact with someone diagnosed as having COVID-19, or have developed critical symptoms of COVID-19.",
-    pleaseFollow:"Please follow the government's instructions.",
-    stay14Days:"If you do develop any COVID-19 symptoms, you must self-isolate for 14 days",
-    followGovertmentRules:"  Follow Government Regulations and Instructions Thoroughly, Avoid public places, and public transportation at all time, Wear a face mask, Wash your hands with soap every 30 minutes, wash your hands for at least 20 seconds, Avoid touching your face.",
-    callNow:"Call Now",   
+    rec4P1: "There are many common viruses other than COVID-19 that can cause your symptoms. Based on your responses you do not need to be tested for COVID-19 at this time",
+    rec4P2: "Testing is currently focused on individuals who have traveled outside Sri Lanka or had contact with someone diagnosed as having COVID-19, or have developed critical symptoms of COVID-19.",
+    pleaseFollow: "Please follow the government's instructions.",
+    stay14Days: "If you do develop any COVID-19 symptoms, you must self-isolate for 14 days",
+    followGovertmentRules: "  Follow Government Regulations and Instructions Thoroughly, Avoid public places, and public transportation at all time, Wear a face mask, Wash your hands with soap every 30 minutes, wash your hands for at least 20 seconds, Avoid touching your face.",
+    callNow: "Call Now",
     rec1P4: "If you are experiencing other symptoms like Tiredness, Aches and Pains, Nasal Congestion, Runny Nose, Sore Throat, Diarrhoea and want assessment contact: <a href='tel:1999'>1999</a> or your district MOH Office immediately",
-    yearsEng:"years",
-    yearsSiTa:"",
-    howOld:"How old are you?",
-    ok:"Okay!",
+    yearsEng: "years",
+    yearsSiTa: "",
+    howOld: "How old are you?",
+    ok: "Okay!",
+    descriPara1: "This online self assessment tool does not provide medical advice, It is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis or treatment. Never ignore professional medical advice in seeking treatment. If you think you may have a medical emergency, immediately call your district Medical Officer of Health or dial 1999.    <br> <br>Digital Humanitarians Sri Lanka ( The Creators of this tool ) exclude any liability for any medical situation due to not contacting a medical expert to check in a situation requiring medical assistance.    ",
+    descriPara2: "I agree that I exclude any liability on the part of the creators ( Digital Humanitarians Sri Lanka ) for any health consequences and medical emergencies suffered due to not seeking medical advice as needed.  ",
+    iAgree: "I Agree",
+    descriTitle: "Disclaimer",
+
+
   });
   $translateProvider.translations("lk", {
     TITLE: "COVID-19 සඳහා ඔබව පරීක්ෂා කළ යුතුද යන්න තීරණය කිරීමට මෙම ස්වයං තක්සේරු මෙවලම භාවිතා කරන්න",
@@ -105,11 +111,15 @@ app.config(function ($translateProvider) {
     stay14Days: "ඔබට කොවිඩ්-19 රෝග ලක්ෂණ මඳ අයුරින් හෝ ඇති වුවහොත් හෝ ඇති වීමට ඇති අවධානමක් ඇති නම් දින 14 ක් ස්වයං නිරෝධායනය වීම අනිවාර්ය වේ",
     followGovertmentRules: "ඔබගේ පිඟාන , කෝප්පය , තුවා වැනි පුද්ගලික ද්‍රව්‍ය වෙන්කර  තබන්න , සෑම විනාඩි 30 කට සැරයක් හෝ යම්කිසි කාර්යක් කිරීමට පෙර හෝ කිරීමෙන් අනතුරුව ඔබගේ අත් හොඳින් සබන් ගා අඩුම තප්පර 20ක් සෝදන්න, නැතිනම් මද්‍යසාර සහිත විෂබීජ නාශකයක් ආධාරයෙන් අත්වල ඇති විෂබීජ විනාශ කරන්න.",
     callNow: "දැන්ම අමතන්න",
-     rec1P4:"රෝග ලක්ෂණ බරපතල  මට්ටමක තිබේ නම් කරුණාකර <a href='tel:1999'>1999</a> සුව සැරිය ඒකකය අමතන්න.",
-     yearsEng:"යි",
-     yearsSiTa:"අවුරුදු",
-     howOld:"ඔබගේ වයස කීයද?",
-     ok:"හරි",
+    rec1P4: "රෝග ලක්ෂණ බරපතල  මට්ටමක තිබේ නම් කරුණාකර <a href='tel:1999'>1999</a> සුව සැරිය ඒකකය අමතන්න.",
+    yearsEng: "යි",
+    yearsSiTa: "අවුරුදු",
+    howOld: "ඔබගේ වයස කීයද?",
+    ok: "හරි",
+    descriPara1: "මෙම කොවිඩ්-19 ස්වයං තක්සේරු කිරීමේ මෙවලම වෛද්‍ය උපදෙස් ලබා දීමක් නොවන බව සලකන්න​, මෙම මෙවලම අදහස් කර ඇත්තේ තොරතුරු දැනගැනීමේ අරමුණු සඳහා පමණි. මෙම මෙවලම වෘත්තීය වෛද්‍ය උපදෙස්, රෝග විනිශ්චය හෝ ප්‍රතිකාර සඳහා ආදේශකයක් නොවේ. ප්‍රතිකාර ලබා ගැනීමේදී වෘත්තීය වෛද්‍ය උපදෙස්  සෑම විටෙක අනුගමනය කරන්න . ඔබට හදිසි සෞඛ්‍ය තත්වයක් ඇතැයි ඔබ සිතන්නේ නම්, වහාම ඔබේ දිස්ත්‍රික් සෞඛ්‍ය වෛද්‍ය නිලධාරියා හෝ 1999 අමතන්න.<br><br>ඔබට වෛද්‍ය ප්‍රතිකාර අවශ්‍ය වන තත්වයක් ඇතොත් ඔබ වෛද්‍යවරයකු හෝ හදිසි ඒකක සම්බන්ධ කර නොගැනීම හේතුවෙන් ඇතිවන ඕනෑම සෞඛ්‍ය  තත්වයක් සඳහා වන සියලු වගකීම් ඩිජිටල් හියුමැනිටේරියන්ස් ශ්‍රී ලංකා (මෙම මෙවලමෙහි නිර්මාතෘවරුන්) බැහැර කරයි.",
+    descriPara2: "සෞඛ්‍ය ප්‍රතිවිපාක සහ අවශ්‍ය පරිදි වෛද්‍ය උපදෙස් ලබා නොගැනීම නිසා ඇති වන හදිසි අවස්ථා සඳහා නිර්මාණකරුවන්  (ඩිජිටල් හියුමැනිටේරියන්ස් ශ්‍රී ලංකා) සියලු වගකීම් වලින් නිදහස් කිරීමට මම එකඟ වෙමි.    ",
+    iAgree: "එකඟ වෙමි",
+    descriTitle: "වියාචනය"
   });
   // Tamil translation
   // Source: https://drive.google.com/file/d/1MmGLE6QF6mWfIKBjV6dO56u0N-Y-UOuv/view?ts=5e7a40cd
@@ -163,10 +173,14 @@ app.config(function ($translateProvider) {
     followGovertmentRules: "அரசாங்க விதிமுறைகள் மற்றும் வழிமுறைகளை முழுமையாகப் பின்பற்றுங்கள், எல்லா நேரங்களிலும் பொது இடங்களுக்கு செல்லுதல் மற்றும் பொது போக்குவரத்தை தவிர்க்கவும், முகமூடியை அணியுங்கள், ஒவ்வொரு 30 நிமிடங்களுக்கும் சோப்புடன் கைகளை கழுவவும், குறைந்தது 20 விநாடிகளுக்கு கைகளை கழுவும் பொறிமுறையை கொண்டிருங்கள். உங்கள் முகத்தைத் தொடுவதைத் தவிர்க்கவும்.",
     callNow: "தொடர்பு கொள்க‌",
     rec1P4: "சோர்வு , குடைச்சல் மற்றும் வலிகள், மூக்கடைப்பு ,மூக்கு ஒழுகுதல் ,தொண்டை வலி, வயிற்றுப்போக்கு போன்ற பிற அறிகுறிகளை நீங்கள் சந்திக்கிறீர்கள் ஆகில் நீங்கள் உடனடியாக தொலைபேசி இல  <a href='tel:1999'>1999</a> அல்லது  உங்கள் மாவட்ட MOH அலுவலகத்திற்கு அழைத்து உங்களை மதிப்பீடு செய்ய வேண்டும்.",
-    yearsEng:"வயதான",
-    yearsSiTa:"",
-    howOld:"உங்கள் வயது என்ன?",
-    ok:"சரி",
+    yearsEng: "வயதான",
+    yearsSiTa: "",
+    howOld: "உங்கள் வயது என்ன?",
+    ok: "சரி",
+    descriPara1: "இந்த ‘online’ சுய மதிப்பீட்டு கருவி மருத்துவ ஆலோசனையை வழங்காது, இது தகவல் நோக்கங்களுக்காக மட்டுமே உருவாக்கப்பட்டது. இது தொழில்முறை மருத்துவ ஆலோசனை, நோயறிதல் அல்லது சிகிச்சைக்கு ஏற்றதாக இல்லை. சிகிச்சையைப் பெறுவதில் தொழில்முறை மருத்துவ ஆலோசனையை ஒரு போதும் புறக்கணிக்காதீர்கள். உங்களுக்கு மருத்துவ அவசரநிலை இருக்கலாம் என்று நீங்கள் நினைத்தால், உடனடியாக உங்கள் மாவட்ட சுகாதார மருத்துவ அதிகாரியை அழைக்கவும் அல்லது தொலைபேசி இல 1999 ஐ தொடர்புகொள்ளுங்கள். <br><br>Digital Humanitarians Sri Lanka (இந்த கருவியை உருவாக்கியவர்கள்) மருத்துவ உதவி தேவைப்படும் சூழ்நிலையைச் சரிபார்க்க மருத்துவ நிபுணரைத் தொடர்பு கொள்ளாததால்   ஏற்படும் எத்தகைய  மருத்துவ நிலைமைக்கும் எந்தவொரு பொறுப்பையும் ஏற்கமாட்டார்கள்.",
+    descriPara2: "எந்தவொரு சுகாதார விளைவுகளுக்கும், தேவைக்கேற்ப மருத்துவ ஆலோசனையைப் பெறாததால் ஏற்படும் மருத்துவ அவசரநிலைகளுக்கும்   இவ் படைப்பாளர்கள்  ( Digital Humanitarians Sri Lanka ) எந்தவொரு பொறுப்பையும்  ஏற்கமாட்டார்கள் என்பதை  நான்  இங்கு ஒப்புக்கொள்கிறேன்.",
+    iAgree: "நான் ஒப்புக்கொள்கிறேன்",
+    descriTitle: "மறுப்பு"
   });
   $translateProvider.preferredLanguage("en");
 });
